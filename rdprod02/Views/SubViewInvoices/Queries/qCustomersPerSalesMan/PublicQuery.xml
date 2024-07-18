@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT FK_ESFITradeAccount_ESFISalesPersons.Name AS Name, 
+       ESFITradeAccount.fSalesPersonGID AS fSalesPersonGID, 
+       Count(ESFITradeAccount.Code) AS Code
+FROM ESFITradeAccount AS ESFITradeAccount 
+     LEFT JOIN ESFISalesPerson AS FK_ESFITradeAccount_ESFISalesPersons
+       ON ESFITradeAccount.fSalesPersonGID = FK_ESFITradeAccount_ESFISalesPersons.GID 
+WHERE (ESFITradeAccount.fCompanyCode = ##(ESCOMPANY))
+      
+GROUP BY FK_ESFITradeAccount_ESFISalesPersons.Name, ESFITradeAccount.fSalesPersonGID, ESFITradeAccount.fCompanyCode
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFITradeAccount</Table>
+  <Params />
+</ESPublicQuery>

@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.1.5.0" Ref="0" ControlType="Entersoft.Framework.Reports.Report, ESReportsCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Name="Report1" DisplayName="TDA_Framed_Simple_Colour_A52" Margins="34, 32, 131, 29" PaperKind="A5Rotated" PageWidth="827" PageHeight="583" Version="22.1" DataMember="ESFIDocumentTrade">
+  <Extensions>
+    <Item1 Ref="1" Key="DataSerializationExtension" Value="ESREPORTSSERIALIZER" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="3" Visible="false" Name="NumericFormat" />
+    <Item2 Ref="4" Visible="false" Name="ShortDateFormat" />
+    <Item3 Ref="5" Visible="false" Name="PercentDiscountFormat" />
+    <Item4 Ref="6" Visible="false" Name="ShortDateTimeFormat" />
+    <Item5 Ref="7" Visible="false" Name="BaseCurrencyValueFormat" />
+    <Item6 Ref="8" Visible="false" Name="PercentFormat" />
+    <Item7 Ref="9" Visible="false" Name="BaseCurrencyPriceFormat" />
+    <Item8 Ref="10" Visible="false" Name="TimeFormat" />
+    <Item9 Ref="12" Description="ShowAllFields" ValueInfo="false" Name="ShowAllFields" Type="#Ref-11" />
+    <Item10 Ref="13" Visible="false" Description="Entity filename for print form preview" Name="DesignTimeEntityFile" />
+    <Item11 Ref="14" Visible="false" Name="MaxCurrencyValueFormat" />
+    <Item12 Ref="15" Visible="false" Name="MaxCurrencyPriceFormat" />
+    <Item13 Ref="16" Visible="false" Name="PercentVATFormat" />
+    <Item14 Ref="17" Visible="false" Name="MaxMeasurementUnitFormat" />
+    <Item15 Ref="18" Visible="false" Name="ShortMonthDayFormat" />
+    <Item16 Ref="19" Visible="false" Name="FullDate" />
+    <Item17 Ref="20" Visible="false" Name="FullDateTime" />
+    <Item18 Ref="21" Visible="false" Name="FullMonthDay" />
+    <Item19 Ref="22" Visible="false" Name="LongDate" />
+    <Item20 Ref="23" Visible="false" Name="LongDateTime" />
+    <Item21 Ref="24" Visible="false" Name="LongMonthDay" />
+    <Item22 Ref="25" Visible="false" Name="MonthDay" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="26" ControlType="TopMarginBand" Name="TopMargin1" HeightF="131">
+      <Controls>
+        <Item1 Ref="27" ControlType="XRLabel" Name="label63" Multiline="true" CanGrow="false" Text="label16" TextAlignment="TopLeft" SizeF="108.516,15.278" LocationFloat="648.153,108.979" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="28" EventName="BeforePrint" PropertyName="Text" Expression="ESCompanyHeaderData('ESGOPerson.WEBSite')" />
+          </ExpressionBindings>
+          <StylePriority Ref="29" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="30" ControlType="XRLabel" Name="label14" Multiline="true" CanGrow="false" Text="label16" TextAlignment="TopLeft" SizeF="110.124,15.278" LocationFloat="518.735,108.971" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="ESCompanyHeaderData('ESGOPerson.EMailAddress')" />
+          </ExpressionBindings>
+          <StylePriority Ref="32" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="33" ControlType="XRLabel" Name="label13" Multiline="true" CanGrow="false" Text="label13" SizeF="238.639,15.278" LocationFloat="517.946,46.503" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="ESCompanyHeaderData('ESGOPerson.ActivityDescription')" />
+          </ExpressionBindings>
+          <StylePriority Ref="35" UseFont="false" />
+        </Item3>
+        <Item4 Ref="36" ControlType="XRPictureBox" Name="CompanyLogo" Sizing="ZoomImage" ImageAlignment="TopLeft" SizeF="299.295,53.103" LocationFloat="0,46.503" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="37" EventName="BeforePrint" PropertyName="ImageSource" Expression="ESCompanyLogo() " />
+          </ExpressionBindings>
+          <StylePriority Ref="38" UsePadding="false" UseBorders="false" />
+        </Item4>
+        <Item5 Ref="39" ControlType="XRLabel" Name="label24" Multiline="true" Text="ΓΕΜΗ:" TextAlignment="MiddleLeft" SizeF="41.178,15.278" LocationFloat="518.952,93.388" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="41" ControlType="XRLabel" Name="label23" Multiline="true" Text="ΑΦΜ:" TextAlignment="BottomLeft" SizeF="41.178,15.278" LocationFloat="518.952,77.49" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="42" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="43" ControlType="XRLabel" Name="label22" Multiline="true" CanGrow="false" Text="label6" TextAlignment="TopLeft" SizeF="72.77,15.278" LocationFloat="560.131,93.388" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue([fCompanyCode], 'GEMHNumber')" />
+          </ExpressionBindings>
+          <StylePriority Ref="45" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="46" ControlType="XRLabel" Name="label21" Multiline="true" CanGrow="false" Text="label16" TextAlignment="MiddleLeft" SizeF="72.77,15.278" LocationFloat="560.133,77.49" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="47" EventName="BeforePrint" PropertyName="Text" Expression="ESCompanyHeaderData('ESGOPerson.TaxRegistrationNumber')" />
+          </ExpressionBindings>
+          <StylePriority Ref="48" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="49" ControlType="XRLabel" Name="label18" Multiline="true" CanGrow="false" Text="ΤΗΛ:" TextAlignment="MiddleLeft" SizeF="44.873,14.541" LocationFloat="642.021,93.809" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="50" UseFont="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="51" ControlType="XRLabel" Name="label17" Multiline="true" CanGrow="false" Text="Δ.Ο.Υ.:" TextAlignment="BottomLeft" SizeF="44.873,15.278" LocationFloat="642.021,77.49" Font="Calibri, 9pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="52" UseFont="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="53" ControlType="XRLabel" Name="label16" Multiline="true" CanGrow="false" Text="label3" TextAlignment="TopLeft" SizeF="69.251,14.541" LocationFloat="687.321,93.388" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="54" EventName="BeforePrint" PropertyName="Text" Expression="ESCompanyHeaderData('ESGOSites.Telephone1')" />
+          </ExpressionBindings>
+          <StylePriority Ref="55" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="56" ControlType="XRLabel" Name="label15" Multiline="true" CanGrow="false" Text="label8" TextAlignment="MiddleLeft" SizeF="69.622,15.278" LocationFloat="686.903,77.49" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="57" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue([fCompanyCode], 'fPersonCodeGID.fTaxOfficeCode.Description') " />
+          </ExpressionBindings>
+          <StylePriority Ref="58" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="59" ControlType="XRLabel" Name="label2" Multiline="true" CanGrow="false" Text="label2" TextAlignment="TopLeft" SizeF="237.858,15.278" LocationFloat="517.946,61.781" Font="Calibri, 9pt" ForeColor="Black" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="60" EventName="BeforePrint" PropertyName="Text" Expression="StringJoin(' ', [arf_fADSiteGID_Address1], ESCompanyHeaderData('ESGOSites.fCityCode'), ESCompanyHeaderData('ESGOSites.fPostalCode'))" />
+          </ExpressionBindings>
+          <StylePriority Ref="61" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="62" ControlType="XRLabel" Name="CompanyName" Multiline="true" CanGrow="false" Text="label2" TextAlignment="TopLeft" SizeF="238.424,23" LocationFloat="518.571,23.503" Font="Calibri, 9pt, style=Bold" ForeColor="Black" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="ESParamValueString('ESCOMPANYNAME') " />
+          </ExpressionBindings>
+          <StylePriority Ref="64" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item14>
+      </Controls>
+    </Item1>
+    <Item2 Ref="65" ControlType="DetailBand" Name="Detail1" HeightF="254.37">
+      <Controls>
+        <Item1 Ref="66" ControlType="XRTable" Name="table4" SizeF="760.221,37.5" LocationFloat="0,0" BorderColor="255,150,150,150" Borders="Top, Bottom">
+          <Rows>
+            <Item1 Ref="67" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="68" ControlType="XRTableCell" Name="tableCell18" Weight="1.5264197757379265" Multiline="true" Text="ΤΥΠΟΣ ΠΑΡΑΣΤΑΤΙΚΟΥ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="69" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="70" ControlType="XRTableCell" Name="tableCell19" Weight="0.50423950534438677" Multiline="true" Text="ΑΡΙΘΜΟΣ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="71" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="72" ControlType="XRTableCell" Name="tableCell20" Weight="0.608372428042374" Multiline="true" Text="ΗΜΕΡΟΜΗΝΙΑ " TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="73" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="74" ControlType="XRTableCell" Name="tableCell21" Weight="0.36096437843275414" Multiline="true" Text="ΩΡΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="75" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item1>
+            <Item2 Ref="76" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="77" ControlType="XRTableCell" Name="tableCell22" Weight="1.5264197757379265" Multiline="true" Text="tableCell22" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="78" EventName="BeforePrint" PropertyName="Text" Expression="RemoveAccents(Upper([ESFIDocumentTrade.czf_fADDocumentTypeGID_Description]))" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="79" UseFont="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="80" ControlType="XRTableCell" Name="tableCell23" Weight="0.50423950534438677" Multiline="true" Text="tableCell23" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[ESFIDocumentTrade.ADCode]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="82" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="83" ControlType="XRTableCell" Name="tableCell24" Weight="0.608372428042374" Multiline="true" Text="tableCell24" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="84" EventName="BeforePrint" PropertyName="Text" Expression="FormatString( ?ShortDateFormat  ,[ESFIDocumentTrade.ADRegistrationDate])  " />
+                  </ExpressionBindings>
+                  <StylePriority Ref="85" UseFont="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="86" ControlType="XRTableCell" Name="tableCell25" Weight="0.36096437843275414" Multiline="true" Text="tableCell25" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="87" EventName="BeforePrint" PropertyName="Text" Expression="FormatString( ?TimeFormat  ,[ESFIDocumentTrade.ADRegistrationDate])  " />
+                  </ExpressionBindings>
+                  <StylePriority Ref="88" UseFont="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="89" UseBorderColor="false" UseBorders="false" />
+        </Item1>
+        <Item2 Ref="90" ControlType="XRPanel" Name="panel4" CanGrow="false" CanShrink="true" SizeF="343.864,199.992" LocationFloat="415.713,54.366" BorderColor="255,150,150,150" Borders="Top" BorderDashStyle="Solid">
+          <Controls>
+            <Item1 Ref="91" ControlType="XRLabel" Name="label113" CanGrow="false" CanShrink="true" Text="label72" WordWrap="false" SizeF="259.189,15.194" LocationFloat="81.589,172.585" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None" CanPublish="false">
+              <ExpressionBindings>
+                <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[arf_fTransporterGID_Name]" />
+                <Item2 Ref="93" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="94" UseFont="false" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="95" ControlType="XRLabel" Name="label112" Multiline="true" CanGrow="false" CanShrink="true" Text="ΜΕΤΑΦΟΡΕΑΣ:" TextAlignment="MiddleLeft" SizeF="81.348,15.194" LocationFloat="0,172.585" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="96" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="97" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="98" ControlType="XRLabel" Name="label111" Multiline="true" CanGrow="false" CanShrink="true" Text="label72" SizeF="258.812,15.194" LocationFloat="81.589,156.458" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="99" EventName="BeforePrint" PropertyName="Text" Expression="[fConveyanceCode]" />
+                <Item2 Ref="100" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="101" UseFont="false" UseBorders="false" />
+            </Item3>
+            <Item4 Ref="102" ControlType="XRLabel" Name="label110" Multiline="true" CanGrow="false" CanShrink="true" Text="ΑΡ. ΑΥΤΟΚΙΝ.:" SizeF="81.351,15.194" LocationFloat="0,156.428" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="103" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="104" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item4>
+            <Item5 Ref="105" ControlType="XRLabel" Name="label109" Multiline="true" CanGrow="false" CanShrink="true" Text="label70" SizeF="258.076,15.194" LocationFloat="81.589,140.317" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="106" EventName="BeforePrint" PropertyName="Text" Expression="[fShippingMethodCode] " />
+                <Item2 Ref="107" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="108" UseFont="false" UseBorders="false" />
+            </Item5>
+            <Item6 Ref="109" ControlType="XRLabel" Name="label108" Multiline="true" CanGrow="false" CanShrink="true" Text="ΤΡ ΑΠΟΣΤΟΛ.:" SizeF="80.931,15.194" LocationFloat="0,139.705" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="110" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="111" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item6>
+            <Item7 Ref="112" ControlType="XRLabel" Name="label5" Multiline="true" CanGrow="false" Text="ΣΤΟΙΧΕΙΑ ΣΥΝΑΛΛΑΓΗΣ" TextAlignment="MiddleCenter" SizeF="343.571,15.828" LocationFloat="0,0.604" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="113" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="114" ControlType="XRLine" Name="line2" SizeF="343.058,6.323" LocationFloat="0,70.248" ForeColor="255,150,150,150" BorderColor="255,150,150,150" Borders="None">
+              <StylePriority Ref="115" UseForeColor="false" UseBorderColor="false" UseBorders="false" />
+            </Item8>
+            <Item9 Ref="116" ControlType="XRLabel" Name="label12" Multiline="true" CanGrow="false" Text="label12" SizeF="246.143,28.542" LocationFloat="85.086,17.666" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="117" EventName="BeforePrint" PropertyName="Text" Expression="[ADReferenceCode] " />
+              </ExpressionBindings>
+              <StylePriority Ref="118" UseFont="false" UseBorders="false" />
+            </Item9>
+            <Item10 Ref="119" ControlType="XRLabel" Name="label9" Multiline="true" CanGrow="false" Text="ΣΧΕΤΙΚΑ ΠΑΡ.:" SizeF="83.021,15.194" LocationFloat="0,17.346" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="120" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item10>
+            <Item11 Ref="121" ControlType="XRLabel" Name="label74" Multiline="true" CanGrow="false" Text="label74" TextAlignment="TopLeft" SizeF="251.563,15.194" LocationFloat="83.021,108.669" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="Concat([arf_fDeliverySiteGID_Address1], &#xA;&#xA;Iif([arf_fDeliverySiteGID_Address1] &lt;&gt; String.Empty, ', ' , '' )&#xA;&#xA;, ESRelationValue([fDeliverySiteGID] , 'fCityCode'))" />
+              </ExpressionBindings>
+              <StylePriority Ref="123" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="124" ControlType="XRLabel" Name="label71" Multiline="true" CanGrow="false" Text="label71" SizeF="251.766,15.194" LocationFloat="83.021,92.627" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="125" EventName="BeforePrint" PropertyName="Text" Expression="Iif([arf_fADSiteGID_Address1] == ESRelationValue([fWareHouseGID], 'Address1') &#xA;&#xA;, 'ΕΔΡΑ' , ESRelationValue([fWareHouseGID], 'Address1')  )" />
+              </ExpressionBindings>
+              <StylePriority Ref="126" UseFont="false" UseBorders="false" />
+            </Item12>
+            <Item13 Ref="127" ControlType="XRLabel" Name="label69" Multiline="true" CanGrow="false" Text="label69" SizeF="251.978,15.194" LocationFloat="83.021,76.586" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="128" EventName="BeforePrint" PropertyName="Text" Expression="[czf_fShippingPurposeCode_Description] " />
+              </ExpressionBindings>
+              <StylePriority Ref="129" UseFont="false" UseBorders="false" />
+            </Item13>
+            <Item14 Ref="130" ControlType="XRLabel" Name="label68" Multiline="true" CanGrow="false" Text="label68" SizeF="245.711,15.194" LocationFloat="85.086,46.811" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="131" EventName="BeforePrint" PropertyName="Text" Expression="[arf_fPaymentMethodGID_Description] " />
+              </ExpressionBindings>
+              <StylePriority Ref="132" UseFont="false" UseBorders="false" />
+            </Item14>
+            <Item15 Ref="133" ControlType="XRLabel" Name="label67" Multiline="true" CanGrow="false" Text="ΠΡΟΟΡΙΣΜΟΣ:" TextAlignment="TopLeft" SizeF="82.207,15.194" LocationFloat="0.482,108.669" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="134" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item15>
+            <Item16 Ref="135" ControlType="XRLabel" Name="label64" Multiline="true" CanGrow="false" Text="ΦΟΡΤΩΣΗ:" SizeF="81.589,15.194" LocationFloat="0.482,92.627" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="136" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item16>
+            <Item17 Ref="137" ControlType="XRLabel" Name="label62" Multiline="true" CanGrow="false" Text="ΣΚ. ΔΙΑΚΙΝ.:" SizeF="82.005,15.194" LocationFloat="0.482,76.586" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="138" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item17>
+            <Item18 Ref="139" ControlType="XRLabel" Name="label61" Multiline="true" CanGrow="false" Text="ΤΡΟΠΟΣ ΠΛΗΡ.:" SizeF="82.487,15.194" LocationFloat="0,46.216" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="140" UseFont="false" UseForeColor="false" UseBorders="false" />
+            </Item18>
+          </Controls>
+          <StylePriority Ref="141" UseBorderColor="false" UseBorders="false" UseBorderDashStyle="false" />
+        </Item2>
+        <Item3 Ref="142" ControlType="XRPanel" Name="panel1" CanGrow="false" CanShrink="true" SizeF="406.104,200" LocationFloat="0,54.367" BorderColor="255,150,150,150" Borders="Top" BorderWidth="1" BorderDashStyle="Solid">
+          <Controls>
+            <Item1 Ref="143" ControlType="XRLabel" Name="label11" Multiline="true" CanGrow="false" Text="ΤΗΛ.:" TextAlignment="TopLeft" SizeF="69.779,15.1" LocationFloat="1.623,172.585" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="144" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="145" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="146" ControlType="XRLabel" Name="label43" Multiline="true" CanGrow="false" CanShrink="true" Text="label52" TextAlignment="TopLeft" SizeF="329.777,15.1" LocationFloat="71.565,172.585" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="147" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.Telephone1') " />
+                <Item2 Ref="148" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="149" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="150" ControlType="XRLabel" Name="label38" Multiline="true" CanGrow="false" Text="ΠΟΛΗ / TK:" TextAlignment="MiddleLeft" SizeF="69.779,14.056" LocationFloat="1.623,156.249" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="151" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="152" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="153" ControlType="XRLabel" Name="label44" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="329.297,14.056" LocationFloat="72.923,157.489" Font="Arial, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="154" EventName="BeforePrint" PropertyName="Text" Expression="Concat(&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.fCityCode'),&#xA;' ',&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.fPostalCode'))" />
+                <Item2 Ref="155" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="156" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="157" ControlType="XRLabel" Name="label39" Multiline="true" CanGrow="false" Text="ΔΙΕΥΘ/ΣΗ:" TextAlignment="BottomLeft" SizeF="69.779,15.098" LocationFloat="1.623,139.705" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="158" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="159" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="160" ControlType="XRLabel" Name="label45" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="329.11,15.1" LocationFloat="71.565,140.746" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="161" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.Address1') " />
+                <Item2 Ref="162" EventName="BeforePrint" PropertyName="Visible" Expression="GetDisplayText(?ShowAllFields)" />
+              </ExpressionBindings>
+              <StylePriority Ref="163" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+            <Item7 Ref="164" ControlType="XRLabel" Name="label59" Multiline="true" CanGrow="false" ProcessNullValues="SuppressAndShrink" Text="TK:" TextAlignment="BottomLeft" SizeF="27.783,15.194" LocationFloat="218.42,95.732" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="165" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="166" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item7>
+            <Item8 Ref="167" ControlType="XRLabel" Name="label49" Multiline="true" CanGrow="false" ProcessNullValues="SuppressAndShrink" Text="label49" TextAlignment="BottomLeft" SizeF="153.932,15.194" LocationFloat="247.396,95.772" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="168" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.fPostalCode')" />
+                <Item2 Ref="169" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="170" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="171" ControlType="XRLabel" Name="label53" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="329.102,15.194" LocationFloat="70.72,64.161" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="172" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.ActivityDescription') " />
+                <Item2 Ref="173" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="174" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+            <Item10 Ref="175" ControlType="XRLabel" Name="label37" Multiline="true" CanGrow="false" Text="ΕΠΑΓΓΕΛΜΑ:" TextAlignment="BottomLeft" SizeF="69.779,15.194" LocationFloat="0,64.161" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="176" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="177" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item10>
+            <Item11 Ref="178" ControlType="XRLabel" Name="label1" Multiline="true" CanGrow="false" Text="ΣΤΟΙΧΕΙΑ ΣΥΝΑΛΛΑΣΣΟΜΕΝΟΥ" TextAlignment="MiddleCenter" SizeF="405.233,15.828" LocationFloat="0,0" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="179" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item11>
+            <Item12 Ref="180" ControlType="XRLabel" Name="label50" Multiline="true" CanGrow="false" Text="Α.Φ.Μ.: " TextAlignment="BottomLeft" SizeF="70.143,15.194" LocationFloat="0,48.116" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="181" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="182" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item12>
+            <Item13 Ref="183" ControlType="XRLabel" Name="label48" Multiline="true" CanGrow="false" Text="ΤΗΛ.:" TextAlignment="MiddleLeft" SizeF="69.779,15.194" LocationFloat="0,112.835" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="184" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', 'ΕΠΑΓΓΕΛΜΑ:' ,  'ΤΗΛ.:')" />
+              </ExpressionBindings>
+              <StylePriority Ref="185" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item13>
+            <Item14 Ref="186" ControlType="XRLabel" Name="label47" Multiline="true" CanGrow="false" Text="ΠΟΛΗ:" TextAlignment="BottomLeft" SizeF="69.779,15.194" LocationFloat="0,95.765" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="187" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', 'ΔΟΥ:' ,  'ΠΟΛΗ.:')" />
+              </ExpressionBindings>
+              <StylePriority Ref="188" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item14>
+            <Item15 Ref="189" ControlType="XRLabel" Name="label46" Multiline="true" CanGrow="false" Text="ΔΙΕΥΘ/ΣΗ:" TextAlignment="BottomLeft" SizeF="69.779,15.194" LocationFloat="0,79.363" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="190" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', 'Α.Φ.Μ.:' ,  'ΔΙΕΥΘ/ΣΗ:')" />
+              </ExpressionBindings>
+              <StylePriority Ref="191" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item15>
+            <Item16 Ref="192" ControlType="XRLabel" Name="label26" Multiline="true" CanGrow="false" Text="ΕΠΩΝΥΜΙΑ:" TextAlignment="BottomLeft" SizeF="70.558,15.194" LocationFloat="0,32.064" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="193" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item16>
+            <Item17 Ref="194" ControlType="XRLabel" Name="label25" CanGrow="false" Text="ΚΩΔΙΚΟΣ:" TextAlignment="BottomLeft" WordWrap="false" SizeF="70.558,15.194" LocationFloat="0,16.305" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="195" EventName="BeforePrint" PropertyName="Text" Expression="Iif(&#xA;&#xA;[arf_fDeliveryPersonGID_Name] == ESRelationValue( [fTradeAccountGID] , 'Name') &#xA;&#xA;,'ΚΩΔΙΚΟΣ' , 'Κατά Εντολή και Λογαριασμό του Πελάτη:' )" />
+                <Item2 Ref="196" EventName="BeforePrint" PropertyName="WidthF" Expression="Iif(&#xA;&#xA;[arf_fDeliveryPersonGID_Name] == ESRelationValue( [fTradeAccountGID] , 'Name') &#xA;&#xA;,70.558 , 220 )" />
+              </ExpressionBindings>
+              <StylePriority Ref="197" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item17>
+            <Item18 Ref="198" ControlType="XRLabel" Name="label58" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="144.401,15.194" LocationFloat="70.72,48.116" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="199" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.TaxRegistrationNumber')" />
+                <Item2 Ref="200" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="201" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item18>
+            <Item19 Ref="202" ControlType="XRLabel" Name="label57" Multiline="true" CanGrow="false" Text="label52" TextAlignment="TopLeft" SizeF="330.127,15.194" LocationFloat="71.881,112.835" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="203" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', &#xA;&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.ActivityDescription') ,&#xA;&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.Telephone1') )&#xA;&#xA;&#xA;&#xA;" />
+              </ExpressionBindings>
+              <StylePriority Ref="204" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item19>
+            <Item20 Ref="205" ControlType="XRLabel" Name="label56" Multiline="true" AutoWidth="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="147.7,15.194" LocationFloat="70.72,95.772" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="206" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', &#xA;&#xA;ESRelationValue([fTradeAccountGID], 'fPersonCodeGID.fTaxOfficeCode.Description') ,&#xA;&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.fCityCode')  )&#xA;&#xA;&#xA;&#xA;" />
+              </ExpressionBindings>
+              <StylePriority Ref="207" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item20>
+            <Item21 Ref="208" ControlType="XRLabel" Name="label55" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="329.11,15.194" LocationFloat="70.72,79.363" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="209" EventName="BeforePrint" PropertyName="Text" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', &#xA;&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.TaxRegistrationNumber') ,&#xA;&#xA;ESRelationValue( [fTradeAccountGID] , 'fPersonCodeGID.fMainAddressGID.Address1')  )&#xA;&#xA;&#xA;&#xA;" />
+              </ExpressionBindings>
+              <StylePriority Ref="210" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item21>
+            <Item22 Ref="211" ControlType="XRLabel" Name="label54" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="329.777,15.194" LocationFloat="70.72,31.022" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'Name') " />
+              </ExpressionBindings>
+              <StylePriority Ref="213" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item22>
+            <Item23 Ref="214" ControlType="XRLabel" Name="label52" Multiline="true" CanGrow="false" Text="label52" TextAlignment="BottomLeft" SizeF="330.656,15.194" LocationFloat="71.565,15.828" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="215" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fTradeAccountGID] , 'Code') " />
+                <Item2 Ref="216" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(&#xA;&#xA;[arf_fDeliveryPersonGID_Name] == ESRelationValue( [fTradeAccountGID] , 'Name') &#xA;&#xA;,True , False )" />
+              </ExpressionBindings>
+              <StylePriority Ref="217" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item23>
+            <Item24 Ref="218" ControlType="XRLabel" Name="label51" Multiline="true" CanGrow="false" Text="ΔΟΥ:" TextAlignment="BottomLeft" SizeF="30.189,15.186" LocationFloat="217.027,47.944" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="219" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="220" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item24>
+            <Item25 Ref="221" ControlType="XRLabel" Name="label60" Multiline="true" CanGrow="false" Text="label60" TextAlignment="BottomLeft" SizeF="151.652,15.169" LocationFloat="247.917,48.116" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="222" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue([fTradeAccountGID], 'fPersonCodeGID.fTaxOfficeCode.Description')" />
+                <Item2 Ref="223" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(GetDisplayText(?ShowAllFields) == 'True', False ,  True)" />
+              </ExpressionBindings>
+              <StylePriority Ref="224" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item25>
+          </Controls>
+          <StylePriority Ref="225" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" />
+        </Item3>
+      </Controls>
+      <StylePriority Ref="226" UseTextAlignment="false" />
+    </Item2>
+    <Item3 Ref="227" ControlType="DetailReportBand" Name="DetailReport2" Level="0" DataMember="ESFIDocumentTrade.FK_ESFILineItem_ESFIDocumentTrade" Borders="None" Visible="false">
+      <Bands>
+        <Item1 Ref="228" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="33.917">
+          <Controls>
+            <Item1 Ref="229" ControlType="XRLine" Name="line1" SizeF="753.825,11" LocationFloat="1.555,0" ForeColor="255,150,150,150" BorderColor="255,150,150,150">
+              <StylePriority Ref="230" UseForeColor="false" UseBorderColor="false" />
+            </Item1>
+            <Item2 Ref="231" ControlType="XRTable" Name="table2" SizeF="760.27,22.917" LocationFloat="0.542,11" BorderColor="255,150,150,150" Borders="Top, Bottom">
+              <Rows>
+                <Item1 Ref="232" ControlType="XRTableRow" Name="tableRow1" Weight="1" TextAlignment="TopLeft" Font="Arial, 9pt" ForeColor="255,0,110,179" BackColor="White">
+                  <Cells>
+                    <Item1 Ref="233" ControlType="XRTableCell" Name="tableCell1" Weight="0.28081668415284056" Multiline="true" Text="ΚΩΔΙΚΟΣ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="234" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="235" ControlType="XRTableCell" Name="tableCell36" Weight="0.72600949156598371" Multiline="true" Text="ΠΕΡΙΓΡΑΦΗ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="236" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="237" ControlType="XRTableCell" Name="tableCell4" Weight="0.11461303474796954" Multiline="true" Text="MM" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="238" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="239" ControlType="XRTableCell" Name="tableCell2" Weight="0.20964416081362461" Multiline="true" Text="ΠΟΣΟΤΗΤΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="240" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="241" ControlType="XRTableCell" Name="tableCell3" Weight="0.20013449699786173" Multiline="true" Text="ΤΙΜΗ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="242" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="243" ControlType="XRTableCell" Name="tableCell5" Weight="0.20673118817435318" Multiline="true" Text="ΑΞΙΑ ΠΡΟ &#xA;ΕΚΠΤ." TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="244" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="245" ControlType="XRTableCell" Name="tableCell38" Weight="0.31507897023099268" Multiline="true" Text="ΕΚΠΤΩΣΗ&#xA;  %           ΠΟΣΟ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="246" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="247" ControlType="XRTableCell" Name="tableCell10" Weight="0.24684283852282718" Multiline="true" Text="ΚΑΘΑΡΗ &#xA;ΑΞΙΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="248" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="249" ControlType="XRTableCell" Name="tableCell9" Weight="0.13524684957366737" Multiline="true" Text="ΦΠΑ %" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" BackColor="White" Padding="2,2,0,0,100" Borders="None">
+                      <StylePriority Ref="250" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item9>
+                  </Cells>
+                  <StylePriority Ref="251" UseFont="false" UseForeColor="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item1>
+              </Rows>
+              <StylePriority Ref="252" UseBorderColor="false" UseBorders="false" />
+            </Item2>
+          </Controls>
+        </Item1>
+        <Item2 Ref="253" ControlType="DetailBand" Name="Detail3" HeightF="25.002" BorderColor="255,148,146,146" Borders="All" BorderDashStyle="Double">
+          <Controls>
+            <Item1 Ref="254" ControlType="XRTable" Name="table3" SizeF="760.27,25" LocationFloat="0,0" Font="Candara, 8pt" BorderColor="255,150,150,150" Borders="Top, Bottom" BorderDashStyle="Solid">
+              <Rows>
+                <Item1 Ref="255" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="256" ControlType="XRTableCell" Name="tableCell6" Weight="0.34595704236497543" Multiline="true" Text="tableCell6" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="257" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fItemGID] , 'Code') " />
+                      </ExpressionBindings>
+                      <StylePriority Ref="258" UseFont="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="259" ControlType="XRTableCell" Name="tableCell7" Weight="0.89973927243985929" Multiline="true" Text="tableCell7" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="260" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fItemGID] , 'Description')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="261" UseFont="false" UseBorders="false" />
+                    </Item2>
+                    <Item3 Ref="262" ControlType="XRTableCell" Name="tableCell8" Weight="0.13591446317133987" TextFormatString="{0:n}" Multiline="true" Text="tableCell8" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="263" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue( [fItemGID] , 'fMainMUGID.fMUCode') " />
+                      </ExpressionBindings>
+                      <StylePriority Ref="264" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="265" ControlType="XRTableCell" Name="tableCell15" Weight="0.26346768949710719" TextFormatString="{0:n}" Multiline="true" Text="tableCell15" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="266" EventName="BeforePrint" PropertyName="Text" Expression="[Quantity]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="267" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="268" ControlType="XRTableCell" Name="tableCell14" Weight="0.24464880050432108" TextFormatString="{0:n}" Multiline="true" Text="tableCell14" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="269" EventName="BeforePrint" PropertyName="Text" Expression="[Price]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="270" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="271" ControlType="XRTableCell" Name="tableCell13" Weight="0.2561749157667908" TextFormatString="{0:n}" Multiline="true" Text="tableCell13" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="272" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyNetValue] + [Discount1Value]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="273" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="274" ControlType="XRTableCell" Name="tableCell12" Weight="0.17823233481128509" TextFormatString="{0:n}" Multiline="true" Text="tableCell12" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="275" EventName="BeforePrint" PropertyName="Text" Expression="[Discount1]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="276" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="277" ControlType="XRTableCell" Name="tableCell11" Weight="0.20520132608532607" TextFormatString="{0:n}" Multiline="true" Text="tableCell11" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="278" EventName="BeforePrint" PropertyName="Text" Expression="[Discount1Value] " />
+                      </ExpressionBindings>
+                      <StylePriority Ref="279" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="280" ControlType="XRTableCell" Name="tableCell17" Weight="0.3085657874532185" TextFormatString="{0:n}" Multiline="true" Text="tableCell17" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="281" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyNetValue]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="282" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item9>
+                    <Item10 Ref="283" ControlType="XRTableCell" Name="tableCell16" Weight="0.16208248740023445" TextFormatString="{0:f1}" Multiline="true" Text="tableCell16" TextAlignment="TopCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="284" EventName="BeforePrint" PropertyName="Text" Expression="ESRelationValue([fVATCategoryCode], 'Normal')" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="285" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item10>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <ExpressionBindings>
+                <Item1 Ref="286" EventName="BeforePrint" PropertyName="Borders" Expression="iif([DataSource.RowCount]  == ([DataSource.CurrentRowIndex] + 1), 'Left,Right,Bottom', ?) " />
+              </ExpressionBindings>
+              <StylePriority Ref="287" UseFont="false" UseBorderColor="false" UseBorders="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+          <StylePriority Ref="288" UseBorderColor="false" UseBorders="false" UseBorderDashStyle="false" />
+        </Item2>
+      </Bands>
+      <ExpressionBindings>
+        <Item1 Ref="289" EventName="BeforePrint" PropertyName="Visible" Expression="Iif( ?showEInvoicingDetails , false , true )  " />
+      </ExpressionBindings>
+    </Item3>
+    <Item4 Ref="290" ControlType="ReportFooterBand" Name="ReportFooter1" PrintAtBottom="true" HeightF="352.973" KeepTogether="true">
+      <Controls>
+        <Item1 Ref="291" ControlType="XRLabel" Name="label4" Multiline="true" Text="label4" SizeF="100,23" LocationFloat="105.79,329.968" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="292" EventName="BeforePrint" PropertyName="Text" Expression="Concat('Testing Retail Link Series: ',ESRelationValue([fADDocumentSeriesGID], 'eInvoicing'))" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="293" ControlType="XRLabel" Name="label3" Multiline="true" Text="ddf&#xA;" SizeF="100,23" LocationFloat="0,213.092" Padding="2,2,0,0,100" BorderColor="255,150,150,150" Borders="Top, Bottom">
+          <StylePriority Ref="294" UseBorderColor="false" UseBorders="false" />
+        </Item2>
+        <Item3 Ref="295" ControlType="XRLine" Name="line4" SizeF="757.959,11" LocationFloat="0,0" ForeColor="255,150,150,150" BorderColor="255,150,150,150">
+          <StylePriority Ref="296" UseForeColor="false" UseBorderColor="false" />
+        </Item3>
+        <Item4 Ref="297" ControlType="XRTable" Name="table5" TextAlignment="MiddleLeft" SizeF="481.391,180.094" LocationFloat="275.098,14.185" BorderColor="255,150,150,150" Borders="None">
+          <Rows>
+            <Item1 Ref="298" ControlType="XRTableRow" Name="tableRow9" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="299" ControlType="XRTableCell" Name="tableCell57" Weight="1.4443837404935314" Multiline="true" Text="ΑΝΑΛΥΣΗ ΥΠΟΛΟΓΙΣΜΟΥ Φ.Π.Α. ΚΑΤΑ ΣΥΝΤΕΛΕΣΤΗ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100">
+                  <StylePriority Ref="300" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="301" ControlType="XRTableCell" Name="tableCell96" Weight="0.11360209519507014" Multiline="true" Padding="2,2,0,0,100" />
+                <Item3 Ref="302" ControlType="XRTableCell" Name="tableCell68" Weight="1.4420154793192488" Multiline="true" Text="ΣΥΝΟΛΑ ΠΑΡΑΣΤΑΤΙΚΟΥ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100">
+                  <StylePriority Ref="303" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+            <Item2 Ref="304" ControlType="XRTableRow" Name="tableRow8" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="305" ControlType="XRTableCell" Name="tableCell35" Weight="0.36109704667502052" Multiline="true" Text="ΦΠΑ %" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="306" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="307" ControlType="XRTableCell" Name="tableCell39" Weight="0.36109704667502052" Multiline="true" Text="ΚΑΘΑΡΗ ΑΞΙΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="308" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="309" ControlType="XRTableCell" Name="tableCell63" Weight="0.32236555789670007" Multiline="true" Text="ΑΞΙΑ ΦΠΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="310" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="311" ControlType="XRTableCell" Name="tableCell69" Weight="0.39982851576586159" Multiline="true" Text="ΣΥΝΟΛΙΚΗ ΑΞΙΑ" TextAlignment="MiddleCenter" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="312" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="313" ControlType="XRTableCell" Name="tableCell58" Weight="0.11360201959791211" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="314" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="315" ControlType="XRTableCell" Name="tableCell75" Weight="0.94200744065240738" Multiline="true" Text="ΑΞΙΑ ΠΡΟ ΕΚΠΤΩΣΗΣ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="316" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="317" ControlType="XRTableCell" Name="tableCell55" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell55" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="318" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyNetValue] + [bTotalDiscountValue]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="319" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+              </Cells>
+            </Item2>
+            <Item3 Ref="320" ControlType="XRTableRow" Name="tableRow7" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="321" ControlType="XRTableCell" Name="tableCell32" Weight="0.3610934941712366" Multiline="true" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="322" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATPercent2]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="323" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="324" ControlType="XRTableCell" Name="tableCell33" Weight="0.3610934941712366" Multiline="true" Text="tableCell33" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="325" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_Netvalue2]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="326" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="327" ControlType="XRTableCell" Name="tableCell64" Weight="0.32237849786602213" Multiline="true" Text="tableCell64" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="328" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATValue2]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="329" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="330" ControlType="XRTableCell" Name="tableCell70" Weight="0.39980417846697808" Multiline="true" Text="tableCell70" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="331" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_TotalValue2]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="332" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="333" ControlType="XRTableCell" Name="tableCell62" Weight="0.11360200997667935" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="334" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="335" ControlType="XRTableCell" Name="tableCell76" Weight="0.94202609078322674" Multiline="true" Text="ΕΚΠΤΩΣΗ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="336" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="337" ControlType="XRTableCell" Name="tableCell34" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell34" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="338" EventName="BeforePrint" PropertyName="Text" Expression="[bTotalDiscountValue]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="339" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+              </Cells>
+            </Item3>
+            <Item4 Ref="340" ControlType="XRTableRow" Name="tableRow5" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="341" ControlType="XRTableCell" Name="tableCell26" Weight="0.36109349417123665" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell26" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="342" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATPercent1]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="343" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="344" ControlType="XRTableCell" Name="tableCell27" Weight="0.36109349417123665" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell27" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="345" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_Netvalue1]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="346" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="347" ControlType="XRTableCell" Name="tableCell65" Weight="0.32237849786602213" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell65" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="348" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATValue1]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="349" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="350" ControlType="XRTableCell" Name="tableCell71" Weight="0.39980417846697808" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell71" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="351" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_TotalValue1]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="352" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="353" ControlType="XRTableCell" Name="tableCell83" Weight="0.11360200997667935" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="354" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="355" ControlType="XRTableCell" Name="tableCell77" Weight="0.94202609078322674" Multiline="true" Text="ΚΑΘΑΡΗ ΑΞΙΑ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="356" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="357" ControlType="XRTableCell" Name="tableCell28" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell28" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" BorderColor="255,150,150,150" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="358" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyNetValue]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="359" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+              </Cells>
+            </Item4>
+            <Item5 Ref="360" ControlType="XRTableRow" Name="tableRow6" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="361" ControlType="XRTableCell" Name="tableCell29" Weight="0.36109349417123671" Multiline="true" Text="tableCell29" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="362" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATPercent3]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="363" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="364" ControlType="XRTableCell" Name="tableCell30" Weight="0.36109349417123671" Multiline="true" Text="tableCell30" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="365" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_Netvalue3]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="366" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="367" ControlType="XRTableCell" Name="tableCell66" Weight="0.32237849786602213" Multiline="true" Text="tableCell66" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="368" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_VATValue3]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="369" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="370" ControlType="XRTableCell" Name="tableCell72" Weight="0.39980417846697813" Multiline="true" Text="tableCell72" TextAlignment="MiddleCenter" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="371" EventName="BeforePrint" PropertyName="Text" Expression="[VATAnalysis_TotalValue3]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="372" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="373" ControlType="XRTableCell" Name="tableCell84" Weight="0.11360200997667935" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="374" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="375" ControlType="XRTableCell" Name="tableCell78" Weight="0.94202609078322685" Multiline="true" Text="ΑΞΙΑ Φ.Π.Α.:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="376" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="377" ControlType="XRTableCell" Name="tableCell31" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell31" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="378" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyVATValue]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="379" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+              </Cells>
+            </Item5>
+            <Item6 Ref="380" ControlType="XRTableRow" Name="tableRow10" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="381" ControlType="XRTableCell" Name="tableCell89" Weight="1.5579780877456109" Multiline="true" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="382" UseFont="false" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="383" ControlType="XRTableCell" Name="tableCell79" Weight="0.94200963906215518" Multiline="true" Text="ΕΠΙΒΑΡ. &amp; ΦΟΡΟΙ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="384" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="385" ControlType="XRTableCell" Name="tableCell61" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell61" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="386" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyChargesValue] + [CurrencyTaxesValue] " />
+                  </ExpressionBindings>
+                  <StylePriority Ref="387" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item6>
+            <Item7 Ref="388" ControlType="XRTableRow" Name="tableRow12" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="389" ControlType="XRTableCell" Name="tableCell82" Weight="0.72219249608834679" Multiline="true" Text="ΣΥΝ. ΠΟΣΟΤΗΤΑ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="390" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="391" ControlType="XRTableCell" Name="tableCell85" Weight="0.72219249608834679" Multiline="true" Text="tableCell85" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="392" EventName="BeforePrint" PropertyName="Text" Expression="[vTotalQuantity]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="393" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="394" ControlType="XRTableCell" Name="tableCell90" Weight="0.11360214813578259" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="395" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="396" ControlType="XRTableCell" Name="tableCell86" Weight="0.94201457522205523" Multiline="true" Text="ΚΡΑΤΗΣΕΙΣ &amp; ΕΚΠΤ.:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="397" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="398" ControlType="XRTableCell" Name="tableCell87" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell87" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="399" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyDiscountValue] + [CurrencyDeductionsValue] " />
+                  </ExpressionBindings>
+                  <StylePriority Ref="400" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item7>
+            <Item8 Ref="401" ControlType="XRTableRow" Name="tableRow13" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="402" ControlType="XRTableCell" Name="tableCell88" Weight="0.72218994789685653" Multiline="true" Text="ΠΡΟΗΓ. ΥΠΟΛΟΙΠΟ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="403" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="404" ControlType="XRTableCell" Name="tableCell91" Weight="0.72218994789685653" Multiline="true" Text="tableCell91" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="405" EventName="BeforePrint" PropertyName="Text" Expression="[TradeAccountPreviousBalance]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="406" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="407" ControlType="XRTableCell" Name="tableCell94" Weight="0.11360803227465488" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="408" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="409" ControlType="XRTableCell" Name="tableCell92" Weight="1.4420056274290944" Multiline="true" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="410" UseFont="false" UseBorders="false" />
+                </Item4>
+              </Cells>
+            </Item8>
+            <Item9 Ref="411" ControlType="XRTableRow" Name="tableRow11" Weight="8.6057210544800427">
+              <Cells>
+                <Item1 Ref="412" ControlType="XRTableCell" Name="tableCell56" Weight="0.72219193712715213" Multiline="true" Text="ΝΕΟ ΥΠΟΛΟΙΠΟ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="413" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="414" ControlType="XRTableCell" Name="tableCell74" Weight="0.72219193712715213" Multiline="true" Text="tableCell74" TextAlignment="MiddleRight" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="415" EventName="BeforePrint" PropertyName="Text" Expression="[TradeAccountNewBalance]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="416" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="417" ControlType="XRTableCell" Name="tableCell95" Weight="0.11360214813578259" Multiline="true" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="418" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="419" ControlType="XRTableCell" Name="tableCell80" Weight="0.94201457522205523" Multiline="true" Text="ΠΛΗΡΩΤΕΟ ΠΟΣΟ:" TextAlignment="MiddleLeft" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <StylePriority Ref="420" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="421" ControlType="XRTableCell" Name="tableCell81" Weight="0.5" TextFormatString="NoSymbolsFormat(?BaseCurrencyValueFormat)" Multiline="true" Text="tableCell81" TextAlignment="MiddleRight" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+                  <ExpressionBindings>
+                    <Item1 Ref="422" EventName="BeforePrint" PropertyName="Text" Expression="[CurrencyPayableAmount]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="423" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item9>
+          </Rows>
+          <StylePriority Ref="424" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="425" ControlType="XRLine" Name="line3" SizeF="757.959,11" LocationFloat="0.196,195.336" ForeColor="255,150,150,150" BorderColor="255,150,150,150">
+          <StylePriority Ref="426" UseForeColor="false" UseBorderColor="false" />
+        </Item5>
+        <Item6 Ref="427" ControlType="XRLabel" Name="label73" Multiline="true" Text="ΠΑΡΑΛΑΒΗ" TextAlignment="MiddleRight" SizeF="105.428,12.057" LocationFloat="639.025,315.827" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+          <StylePriority Ref="428" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="429" ControlType="XRLabel" Name="label72" Multiline="true" Text="ΕΛΕΓΧΟΣ" TextAlignment="MiddleCenter" SizeF="100,12.057" LocationFloat="330.898,315.827" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+          <StylePriority Ref="430" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="431" ControlType="XRLabel" Name="label70" Multiline="true" Text="ΕΚΔΟΣΗ" TextAlignment="MiddleLeft" SizeF="100,12.057" LocationFloat="0.703,315.827" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+          <StylePriority Ref="432" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="433" ControlType="XRPanel" Name="panel3" CanGrow="false" CanShrink="true" SizeF="756.293,72.445" LocationFloat="0.703,243.382" BorderColor="255,150,150,150" Borders="Top, Bottom">
+          <Controls>
+            <Item1 Ref="434" ControlType="XRBarCode" Name="barCode1" TextAlignment="BottomRight" SizeF="214.063,49.479" LocationFloat="539.76,14" Padding="150,10,0,0,100" Borders="None">
+              <Symbology Ref="435" Name="QRCode" />
+              <StylePriority Ref="436" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="437" ControlType="XRLabel" Name="label92" Multiline="true" Text="ΕΝΑΣ ΑΛΛΟΣ ΚΩΔΙΚΟΣ:" TextAlignment="MiddleLeft" SizeF="100,14" LocationFloat="0.65,56" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="438" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="439" ControlType="XRLabel" Name="label91" Multiline="true" Text="MARK:" TextAlignment="MiddleLeft" SizeF="100,14" LocationFloat="0.65,42" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="440" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="441" ControlType="XRLabel" Name="label90" Multiline="true" Text="UID:" TextAlignment="MiddleLeft" SizeF="100,14" LocationFloat="0.65,28" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="442" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="443" ControlType="XRLabel" Name="label89" Multiline="true" Text="URL:" TextAlignment="MiddleLeft" SizeF="100,14" LocationFloat="0.65,14" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="444" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="445" ControlType="XRLabel" Name="label88" Multiline="true" Text="ΟΝΟΜΑ ΠΑΡΟΧΟΥ:" TextAlignment="MiddleLeft" SizeF="100,14" LocationFloat="0.65,0" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="446" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item6>
+          </Controls>
+          <ExpressionBindings>
+            <Item1 Ref="447" EventName="BeforePrint" PropertyName="Visible" Expression="Iif(ESRelationValue([fADDocumentSeriesGID], 'eInvoicing') == 2, True , False )" />
+          </ExpressionBindings>
+          <StylePriority Ref="448" UseBorderColor="false" UseBorders="false" />
+        </Item9>
+        <Item10 Ref="449" ControlType="XRPanel" Name="panel9" SizeF="262.858,180.094" LocationFloat="0.704,14.185" BorderColor="255,150,150,150" Borders="None" BorderDashStyle="Solid">
+          <Controls>
+            <Item1 Ref="450" ControlType="XRLabel" Name="label19" Multiline="true" Text="label19" TextAlignment="TopLeft" SizeF="257.91,158.203" LocationFloat="0,19.156" Font="Calibri, 9pt" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="451" EventName="BeforePrint" PropertyName="Text" Expression="[ADComments] " />
+              </ExpressionBindings>
+              <StylePriority Ref="452" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="453" ControlType="XRLabel" Name="label31" Multiline="true" Text="ΠΑΡΑΤΗΡΗΣΕΙΣ:" TextAlignment="MiddleLeft" SizeF="100,16.224" LocationFloat="0,0.126" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100" Borders="None">
+              <StylePriority Ref="454" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+          <StylePriority Ref="455" UseBorderColor="false" UseBorders="false" UseBorderDashStyle="false" />
+        </Item10>
+      </Controls>
+    </Item4>
+    <Item5 Ref="456" ControlType="PageFooterBand" Name="PageFooter1" HeightF="22.184">
+      <Controls>
+        <Item1 Ref="457" ControlType="XRPageInfo" Name="pageInfo1" SizeF="123.644,22.184" LocationFloat="70.688,0" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100">
+          <StylePriority Ref="458" UseFont="false" UseForeColor="false" />
+        </Item1>
+        <Item2 Ref="459" ControlType="XRLabel" Name="label82" Multiline="true" Text="ΣΕΛΙΔΑ:" SizeF="69.141,22.184" LocationFloat="0.65,0" Font="Calibri, 9pt, style=Bold" ForeColor="255,0,110,179" Padding="2,2,0,0,100">
+          <StylePriority Ref="460" UseFont="false" UseForeColor="false" />
+        </Item2>
+      </Controls>
+    </Item5>
+    <Item6 Ref="461" ControlType="BottomMarginBand" Name="BottomMargin1" HeightF="29" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="462" Name="xrControlStyle1" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+  </StyleSheet>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v22.1" Ref="11" Content="System.Boolean" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

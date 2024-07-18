@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[with es00List as (
+select dbo.GetTradeAccountGID(##(ESUSER),##(ESCOMPANY),##(ESBRANCH)) as TradeAccount,
+(select top 1 ESGOSites.GID from ESGOSites inner join ESGOPerson on(ESGOSites.fPersonCodeGID=ESGOPerson.GID)
+inner join ESFITradeAccount on(ESGOPerson.GID=ESFITradeAccount.fPersonCodeGID)
+where ESFITradeAccount.GID= dbo.GetTradeAccountGID(##(ESUSER),##(ESCOMPANY),##(ESBRANCH))
+and ESGOSites.Code=(select top 1 StringField1 from ESGOUser where userid=##(ESUSER))) as SiteCode 
+)
+SELECT cast(TradeAccount as uniqueidentifier) AS TradeAccount, 
+       SiteCode AS SiteCode
+FROM ES00List AS ES00List 
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ES00List</Table>
+  <Params />
+</ESPublicQuery>

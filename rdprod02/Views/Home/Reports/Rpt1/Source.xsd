@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ESFIDocumentTrade" msprop:QueryId="QDoc">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:ESODSTAG="ESFIDocumentTrade.GID" type="xs:string" minOccurs="0" />
+              <xs:element name="ADCode" msprop:ESODSTAG="ESFIDocumentTrade.ADCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ADRegistrationDate" msprop:ESODSTAG="ESFIDocumentTrade.ADRegistrationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fTradeAccountGID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:ESODSTAG="ESFIDocumentTrade.fTradeAccountGID" type="xs:string" minOccurs="0" />
+              <xs:element name="fTradeAccountSiteGID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:ESODSTAG="ESFIDocumentTrade.fTradeAccountSiteGID" type="xs:string" minOccurs="0" />
+              <xs:element name="Code1" msprop:ESODSTAG="ESFITradeAccount.Code" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:ESODSTAG="ESFITradeAccount.Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Code2" msprop:ESODSTAG="ESGOSites.Code" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:ESODSTAG="ESGOSites.Description" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDocumentState" msprop:ESODSTAG="ESFIDocumentTrade.ADDocumentState" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="ADDocumentState_Text" type="xs:string" minOccurs="0" />
+              <xs:element name="ADCancelState" msprop:ESODSTAG="ESFIDocumentTrade.ADCancelState" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="ADCancelState_Text" type="xs:string" minOccurs="0" />
+              <xs:element name="ADTransitionState" msprop:ESODSTAG="ESFIDocumentTrade.ADTransitionState" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="ADTransitionState_Text" type="xs:string" minOccurs="0" />
+              <xs:element name="ADStringField1" msprop:ESODSTAG="ESFIDocumentTrade.ADStringField1" type="xs:string" minOccurs="0" />
+              <xs:element name="NetValue" msprop:ESODSTAG="ESFIDocumentTrade.NetValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VATValue" msprop:ESODSTAG="ESFIDocumentTrade.VATValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ADTotalValue" msprop:ESODSTAG="ESFIDocumentTrade.ADTotalValue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

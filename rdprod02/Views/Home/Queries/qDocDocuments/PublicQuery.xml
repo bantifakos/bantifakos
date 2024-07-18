@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT FK_ESFILineItemFulfillment_ESFILineItem_TargetLineItem.fDocumentGID AS fDocumentGID1, 
+       FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem.fDocumentGID AS fDocumentGID, 
+       FK_ESFILineItem_ESFIDocumentTrade1.ADCode AS ADCode, 
+       FK_ESFILineItem_ESFIDocumentTrade.ADRegistrationDate AS ADRegistrationDate, 
+       FK_ESFILineItem_ESFIDocumentTrade1.ADRegistrationDate AS ADRegistrationDate1, 
+       FK_ESFILineItem_ESFIDocumentTrade.ADCode AS ADCode1, 
+       FK_ESFIDocumentTrade_ESFITradeAccount.Name AS Name
+FROM ESFILineItemFulfillment AS ESFILineItemFulfillment 
+     INNER JOIN ESFILineItem AS FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem
+       ON ESFILineItemFulfillment.fSourceLineItemGID = FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem.GID 
+     INNER JOIN ESFILineItem AS FK_ESFILineItemFulfillment_ESFILineItem_TargetLineItem
+       ON ESFILineItemFulfillment.fTargetLineItemGID = FK_ESFILineItemFulfillment_ESFILineItem_TargetLineItem.GID 
+     LEFT JOIN ESFIDocumentTrade AS FK_ESFILineItem_ESFIDocumentTrade
+       ON FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem.fDocumentGID = FK_ESFILineItem_ESFIDocumentTrade.GID 
+     LEFT JOIN ESFIDocumentTrade AS FK_ESFILineItem_ESFIDocumentTrade1
+       ON FK_ESFILineItemFulfillment_ESFILineItem_TargetLineItem.fDocumentGID = FK_ESFILineItem_ESFIDocumentTrade1.GID 
+     LEFT JOIN ESFIDocumentType AS FK_ESFIDocumentTrade_ESFIDocumentType
+       ON FK_ESFILineItem_ESFIDocumentTrade.fADDocumentTypeGID = FK_ESFIDocumentTrade_ESFIDocumentType.GID 
+     LEFT JOIN ESFIDocumentType AS FK_ESFIDocumentTrade_ESFIDocumentType1
+       ON FK_ESFILineItem_ESFIDocumentTrade1.fADDocumentTypeGID = FK_ESFIDocumentTrade_ESFIDocumentType1.GID 
+     INNER JOIN ESFITradeAccount AS FK_ESFIDocumentTrade_ESFITradeAccount
+       ON FK_ESFILineItem_ESFIDocumentTrade1.fTradeAccountGID = FK_ESFIDocumentTrade_ESFITradeAccount.GID 
+WHERE (FK_ESFIDocumentTrade_ESFIDocumentType.Code = 'ΠΑΡ')
+       AND (FK_ESFILineItem_ESFIDocumentTrade.fCompanyCode = ##(ESCOMPANY))
+       AND (FK_ESFILineItem_ESFIDocumentTrade.ADCancelState = 0)
+       AND (FK_ESFIDocumentTrade_ESFIDocumentType1.Code = 'ΔΑΠ')
+       AND (FK_ESFILineItem_ESFIDocumentTrade1.ADCancelState = 0)
+       AND (ESEqual(FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem.fDocumentGID, @fDocumentGID))
+      
+GROUP BY FK_ESFILineItemFulfillment_ESFILineItem_TargetLineItem.fDocumentGID, FK_ESFILineItemFulfillment_ESFILineItem_SourceLineItem.fDocumentGID, FK_ESFILineItem_ESFIDocumentTrade1.ADCode, FK_ESFILineItem_ESFIDocumentTrade.ADRegistrationDate, FK_ESFILineItem_ESFIDocumentTrade1.ADRegistrationDate, FK_ESFILineItem_ESFIDocumentTrade.ADCode, FK_ESFIDocumentTrade_ESFITradeAccount.Name
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFILineItemFulfillment</Table>
+  <Params>
+    <Param>
+      <ID>fDocumentGID</ID>
+      <Type>System.Guid, mscorlib</Type>
+      <ODSTag>6B133CAF-83BC-474B-9314-031AD45F6386</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFITradeAccount.GID AS GID, 
+       ESFITradeAccount.Code AS Code, 
+       FK_ESGOPerson_PersonCode.GID AS GID2, 
+       FK_ESGOPerson_PersonCode.Code AS Code1, 
+       FK_ESGOPerson_PersonCode.Description AS Description
+FROM ESFITradeAccount AS ESFITradeAccount 
+     LEFT JOIN ESGOPerson AS FK_ESGOPerson_PersonCode1
+       ON ESFITradeAccount.fPersonCodeGID = FK_ESGOPerson_PersonCode1.GID 
+     RIGHT JOIN ESGOSites AS FK_ESGOPerson_PersonCode
+       ON FK_ESGOPerson_PersonCode1.GID = FK_ESGOPerson_PersonCode.fPersonCodeGID 
+WHERE (ESFITradeAccount.Type = 0)
+       AND (ESFITradeAccount.fCompanyCode = ##(ESCOMPANY))
+       AND (ESFITradeAccount.Inactive = 0)
+       AND (ESFITradeAccount.Code = @Code)
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFITradeAccount</Table>
+  <Params>
+    <Param>
+      <ID>Code</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>11AA2299-3F5E-4B2A-B530-6222866A7601</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

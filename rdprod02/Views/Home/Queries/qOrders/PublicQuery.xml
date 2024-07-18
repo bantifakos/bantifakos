@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFIDocumentTrade.GID AS GID, 
+       ESFIDocumentTrade.ADCode AS ADCode, 
+       ESFIDocumentTrade.ADRegistrationDate AS ADRegistrationDate, 
+       ESFIDocumentTrade.fTradeAccountGID AS fTradeAccountGID, 
+       FK_ESFIDocumentTrade_ESFITradeAccount.Code AS Code1, 
+       FK_ESFIDocumentTrade_ESFITradeAccount.Name AS Name, 
+       ESFIDocumentTrade.fTradeAccountSiteGID AS fTradeAccountSiteGID, 
+       FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.Code AS Code2, 
+       FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.Description AS Description, 
+       ESFIDocumentTrade.ADDocumentState AS ADDocumentState, 
+       FK_ESFIDocumentTrade_ESFISalesPerson.Code AS Code3, 
+       FK_ESFIDocumentTrade_ESFISalesPerson.Name AS Name1, 
+       FK_ESFIDocumentTrade_ESFIPaymentMethod.Code AS Code4, 
+       FK_ESFIDocumentTrade_ESFIPaymentMethod.Description AS Description1, 
+       ESFIDocumentTrade.ADAlternativeCode AS ADAlternativeCode, 
+       ESFIDocumentTrade.ADAlternativeDate AS ADAlternativeDate, 
+       ESFIDocumentTrade.DeliveryDueDate AS DeliveryDueDate, 
+       ESFIDocumentTrade.fDeliverySiteGID AS fDeliverySiteGID, 
+       FK_ESGOSites_ESFIDocumentTrade_DeliverySite.Code AS Code5, 
+       FK_ESGOSites_ESFIDocumentTrade_DeliverySite.Description AS Description2, 
+       FK_ESFIDocumentTrade_ESFIZShippingMethod.Description AS Description3, 
+       ESFIDocumentTrade.fShippingMethodCode AS fShippingMethodCode, 
+       ESFIDocumentTrade.fTransporterGID AS fTransporterGID, 
+       FK_ESGOPerson_ESFIDocumentTrade_Transporter.Name AS Name2, 
+       ESFIDocumentTrade.ADCancelState AS ADCancelState, 
+       ESFIDocumentTrade.NetValue AS NetValue, 
+       ESFIDocumentTrade.VATValue AS VATValue, 
+       ESFIDocumentTrade.ADTotalValue AS ADTotalValue, 
+       ESFIDocumentTrade.DiscountValue AS DiscountValue, 
+       ESFIDocumentTrade.PayableAmount AS PayableAmount, 
+       ESFIDocumentTrade.ADReasoning AS ADReasoning, 
+       ESFIDocumentTrade.fWareHouseGID AS fWareHouseGID, 
+       FK_ESFIDocumentTrade_ESGOSites.Code AS Code7, 
+       FK_ESFIDocumentTrade_ESGOSites.Description AS Description4, 
+       ESFIDocumentTrade.ADComments AS ADComments, 
+       ESFIDocumentTrade.fADSiteGID AS fADSiteGID, 
+       FK_ESGOSites_ESFIDocumentTrade_ADSite.Code AS Code8, 
+       FK_ESGOSites_ESFIDocumentTrade_ADSite.Description AS Description5, 
+       ESFIDocumentTrade.fTransitionStepCode AS fTransitionStepCode
+FROM ESFIDocumentTrade AS ESFIDocumentTrade 
+     LEFT JOIN ESFIDocumentType AS FK_ESFIDocumentTrade_ESFIDocumentType
+       ON ESFIDocumentTrade.fADDocumentTypeGID = FK_ESFIDocumentTrade_ESFIDocumentType.GID 
+     INNER JOIN ESFITradeAccount AS FK_ESFIDocumentTrade_ESFITradeAccount
+       ON ESFIDocumentTrade.fTradeAccountGID = FK_ESFIDocumentTrade_ESFITradeAccount.GID 
+     LEFT JOIN ESGOSites AS FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite
+       ON ESFIDocumentTrade.fTradeAccountSiteGID = FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.GID 
+     LEFT JOIN ESFISalesPerson AS FK_ESFIDocumentTrade_ESFISalesPerson
+       ON ESFIDocumentTrade.fSalesPersonGID = FK_ESFIDocumentTrade_ESFISalesPerson.GID 
+     LEFT JOIN ESFIPaymentMethod AS FK_ESFIDocumentTrade_ESFIPaymentMethod
+       ON ESFIDocumentTrade.fPaymentMethodGID = FK_ESFIDocumentTrade_ESFIPaymentMethod.GID 
+     LEFT JOIN ESGOSites AS FK_ESGOSites_ESFIDocumentTrade_DeliverySite
+       ON ESFIDocumentTrade.fDeliverySiteGID = FK_ESGOSites_ESFIDocumentTrade_DeliverySite.GID 
+     LEFT JOIN ESFIZShippingMethod AS FK_ESFIDocumentTrade_ESFIZShippingMethod
+       ON ESFIDocumentTrade.fShippingMethodCode = FK_ESFIDocumentTrade_ESFIZShippingMethod.Code 
+     LEFT JOIN ESGOPerson AS FK_ESGOPerson_ESFIDocumentTrade_Transporter
+       ON ESFIDocumentTrade.fTransporterGID = FK_ESGOPerson_ESFIDocumentTrade_Transporter.GID 
+     LEFT JOIN ESGOSites AS FK_ESFIDocumentTrade_ESGOSites
+       ON ESFIDocumentTrade.fWareHouseGID = FK_ESFIDocumentTrade_ESGOSites.GID 
+     LEFT JOIN ESGOSites AS FK_ESGOSites_ESFIDocumentTrade_ADSite
+       ON ESFIDocumentTrade.fADSiteGID = FK_ESGOSites_ESFIDocumentTrade_ADSite.GID 
+WHERE (ESFIDocumentTrade.fCompanyCode = ##(ESCOMPANY))
+       AND (FK_ESFIDocumentTrade_ESFIDocumentType.Code = 'ΠΑΡ')
+       AND (ESFIDocumentTrade.ADDocumentState <> 2)
+       AND (ESFIDocumentTrade.ADCancelState = 0)
+       AND (ESEqual(ESFIDocumentTrade.ADRegistrationDate, @ADRegistrationDate))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFIDocumentTrade</Table>
+  <Params>
+    <Param>
+      <ID>ADRegistrationDate</ID>
+      <Type>Entersoft.Framework.Platform.ESDateRange, QueryProcess</Type>
+      <ODSTag>7F9E950D-6C69-4172-842A-BF34764F9464</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

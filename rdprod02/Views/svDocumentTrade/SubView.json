@@ -1,0 +1,38 @@
+{
+  "@externalProps": {
+    "dsgn": {
+      "props": [
+        {
+          "name": "entityGID"
+        },
+        {
+          "name": "isDirty"
+        },
+        {
+          "name": "deletedToggle"
+        },
+        {
+          "name": "savedToggle"
+        },
+        {
+          "name": "createdToggle"
+        },
+        {
+          "name": "lastEntityGID"
+        },
+        {
+          "name": "createTrigger"
+        },
+        {
+          "name": "deleteTrigger"
+        },
+        {
+          "name": "saveTrigger"
+        },
+        {
+          "name": "isNew"
+        }
+      ]
+    }
+  }
+}

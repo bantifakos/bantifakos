@@ -1,0 +1,11 @@
+{
+  "~!": {
+    "title": "Netmed Supplies"
+  },
+  "~!/dsgn": {
+    "hints": {
+      "disablePagePreferences": true,
+      "hasServerConditions": false
+    }
+  }
+}

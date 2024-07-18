@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ShowMultiFormFOCommand RootNodeType="Entersoft.Framework.Windows.CustomCommands.ShowMultiFormFOCommand, ESCtxCmds" Version="2" CGID="00174882-a929-4b96-a242-bc0da8c9a17e" HasMenuEntry="False" Identity="True" uiless_in_transaction="True">
+  <ParamsNode CGID="cd6b3193-d366-409c-a017-87c0c96c8475" ControlsWidth="200" />
+  <Profiles CGID="a5a29e4d-4488-46c6-b9ee-c9a8dc09e613">
+    <Profile CGID="df243321-f4d3-4afc-9511-62eaaf130fda" UILess="True" Identity="True" Save="False">
+      <SourceEntity EntityID="ESFIDocumentTrade" />
+      <TargetEntity EntityID="ESFIDocumentTrade" />
+      <SaveExpression CGID="478bb9bb-5d31-4989-aaf1-a32118f5dc63">
+        <Supplier>
+          <EnumValue Type="Entersoft.Framework.Platform.Helper.SaveEnum, ESEntity" Value="SAVE_AND_ACTIONS" />
+        </Supplier>
+      </SaveExpression>
+      <RootRule CGID="51a5a023-50f4-4280-8d68-e412d45f0b62" Source="ESFIDocumentTrade" Target="ESFIDocumentTrade" TargetKey="GID">
+        <ExecuteSimpleConditions CGID="88472cb7-115a-40ca-a533-41cf68a2bf8b" />
+        <Variables CGID="1bdcab44-0b1c-4236-aed0-3d0869a02deb" />
+        <Rules CGID="e68cab64-fb7b-4094-8ec9-9b0c1b3e6e91">
+          <Rule CGID="9554b432-fe4b-4845-bf16-4a5065a96a04" Source="FK_ESFILineItem_ESFIDocumentTrade" Target="FK_ESFILineItem_ESFIDocumentTrade" TargetKey="GID">
+            <ExecuteSimpleConditions CGID="f41662f9-5122-4786-a805-f8838e584d8c" />
+            <Variables CGID="8a47d51d-b25a-421f-900d-c0e3b4ccfdcf" />
+            <Rules CGID="dadd97e1-e5dc-41b6-a372-85f3c3b649c4" />
+            <Conditions CGID="3bd96025-8dcd-41f8-8cf9-c1c60d50ca39" />
+            <Assignments CGID="24dcf0b3-2bfe-44f0-8ceb-65667417982a">
+              <Assign CGID="9151deb5-cb45-48da-8088-d80754d5b274" Column="GID">
+                <Supplier>
+                  <SourceValue>GID</SourceValue>
+                </Supplier>
+                <Conditions CGID="18f94526-71a4-469a-ae3e-86650820416d" />
+              </Assign>
+              <Assign CGID="c90d90a2-fb5e-4b7a-a639-a2e0df973f37" Column="UDFValue1">
+                <Supplier>
+                  <ConstantValue>0</ConstantValue>
+                </Supplier>
+                <Conditions CGID="2f72b1fe-1ee9-4166-9cbe-eba848df36c9" />
+              </Assign>
+            </Assignments>
+            <OrderByNodes CGID="e8f837fb-6df5-4905-b817-c77648a4ed18" />
+            <GroupByNodes CGID="c4f3633f-4981-4484-b5fe-944f3f28a1b1">
+              <GroupAtMostEntries CGID="2e3752ba-25d5-4105-874d-1f3aa6b2794c">
+                <Supplier>
+                  <ConstantValue>0</ConstantValue>
+                </Supplier>
+              </GroupAtMostEntries>
+            </GroupByNodes>
+            <MultiplyByNodes CGID="2cc04ea9-2401-4fc1-b626-15e1275de6ff" />
+            <RowActions CGID="5f003e7b-a0ff-4e40-994a-91a5001a661a" />
+          </Rule>
+        </Rules>
+        <Conditions CGID="d9227e8d-927e-4861-8f1e-47dd91f83873">
+          <Condition CGID="e30731fb-fdc2-4c9a-bc2a-8343e6cb728f">
+            <Supplier CGID="c12b769f-98ce-4d45-9352-fb26a9043fc0">
+              <Param CGID="e5b315cd-2177-4301-ad74-4627dce06e79" ParamName="$Doc">
+                <Supplier>
+                  <SourceValue>ADCode</SourceValue>
+                </Supplier>
+              </Param>
+              <ExpressionValue>TaskInfo($Doc.ToString)
+Return True</ExpressionValue>
+            </Supplier>
+            <FormatParams CGID="478d2b1b-78bf-4184-8289-f74c99dcfbad" />
+          </Condition>
+        </Conditions>
+        <Assignments CGID="be428a7b-a059-41cc-820b-c4d01b0e3d8f">
+          <Assign CGID="bdbe416d-eb0f-481b-a517-aee965654bc5" Column="GID">
+            <Supplier>
+              <SourceValue>GID</SourceValue>
+            </Supplier>
+            <Conditions CGID="9e0e5f97-ab09-47ac-81d0-b55fe6f3fbbd" />
+          </Assign>
+        </Assignments>
+        <OrderByNodes CGID="5a738269-2814-4e0f-ae65-da87a49b0dfb" />
+        <GroupByNodes CGID="b54325a2-894d-48e2-b63b-60b36e372d6f">
+          <GroupAtMostEntries CGID="d6230208-ba4a-4177-ace9-a156b8e8b3a5">
+            <Supplier>
+              <ConstantValue>0</ConstantValue>
+            </Supplier>
+          </GroupAtMostEntries>
+        </GroupByNodes>
+        <MultiplyByNodes CGID="538a5170-731e-4a5d-a306-4520c67e3d20" />
+        <RowActions CGID="0c94ab78-1153-489d-a381-a132bbbd39d0" />
+      </RootRule>
+      <MapExceptions CGID="77a014e3-a8c2-45cb-a04b-2e9335687951" />
+      <LoginCredentials CGID="526082c2-4185-4eaa-b41c-11ba5e5d040b" />
+    </Profile>
+  </Profiles>
+  <ExecuteConditions CGID="e7ce05fc-6a34-46fd-9c79-8d835198f7aa" />
+  <ShowSimpleConditions CGID="aa888267-07e3-4666-ab7d-abfb6dd626aa" />
+  <ExecuteMessageConditions CGID="80fe3b97-e1a1-4968-82af-22d697b55569" />
+  <ValidityConditions CGID="afc3616e-86ff-46fb-b653-25770915bf19" />
+  <UserGroups>
+  </UserGroups>
+  <CommandAvailability />
+  <SourceEntity EntityID="ESFIDocumentTrade" />
+  <Translations>
+    <ESCaptionsDS xmlns="http://tempuri.org/ESCaptionsDS.xsd">
+  <Captions>
+    <ID>00174882-a929-4b96-a242-bc0da8c9a17e</ID>
+    <Suffix>Caption</Suffix>
+    <LangID>el</LangID>
+    <Caption>Zero Quantities</Caption>
+  </Captions>
+  <Captions>
+    <ID>2e3752ba-25d5-4105-874d-1f3aa6b2794c</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Maximum Entries</Caption>
+  </Captions>
+  <Captions>
+    <ID>d6230208-ba4a-4177-ace9-a156b8e8b3a5</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Maximum Entries</Caption>
+  </Captions>
+</ESCaptionsDS>
+  </Translations>
+</ShowMultiFormFOCommand>

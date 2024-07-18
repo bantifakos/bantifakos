@@ -1,0 +1,22 @@
+{
+  "@btnDelete_visible/dsgn": {
+    "functionBody": "!$isNew && $entityGID",
+    "functionId": "fn_svDocumentTrade_1",
+    "functionScriptKind": "Function"
+  },
+  "@uilCheckUserRole/dsgn": {
+    "functionBody": "$isAdmin==\"1\"",
+    "functionId": "fn_svDocumentTrade_3",
+    "functionScriptKind": "Function"
+  },
+  "@uilDisableForm/dsgn": {
+    "functionBody": "$fTransitionStepCode == \"CONFIRMED\" && !$IsDirty",
+    "functionId": "fn_svDocumentTrade_2",
+    "functionScriptKind": "Function"
+  },
+  "@uilLastEntityGID/dsgn": {
+    "functionBody": "if (!$currentEntityGID) return\r\nreturn $currentEntityGID",
+    "functionId": "fn_svDocumentTrade_0",
+    "functionScriptKind": "Function"
+  }
+}

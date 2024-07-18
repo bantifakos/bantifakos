@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFIDocumentTrade.GID AS GID, 
+       ESFIDocumentTrade.ADCode AS ADCode, 
+       ESFIDocumentTrade.ADRegistrationDate AS ADRegistrationDate, 
+       ESFIDocumentTrade.fTradeAccountGID AS fTradeAccountGID, 
+       ESFIDocumentTrade.fTradeAccountSiteGID AS fTradeAccountSiteGID, 
+       FK_ESFIDocumentTrade_ESFITradeAccount.Code AS Code1, 
+       FK_ESFIDocumentTrade_ESFITradeAccount.Name AS Name, 
+       FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.Code AS Code2, 
+       FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.Description AS Description, 
+       ESFIDocumentTrade.ADDocumentState AS ADDocumentState, 
+       ESFIDocumentTrade.ADCancelState AS ADCancelState, 
+       ESFIDocumentTrade.ADTransitionState AS ADTransitionState, 
+       ESFIDocumentTrade.ADStringField1 AS ADStringField1, 
+       ESFIDocumentTrade.NetValue AS NetValue, 
+       ESFIDocumentTrade.VATValue AS VATValue, 
+       ESFIDocumentTrade.ADTotalValue AS ADTotalValue
+FROM ESFIDocumentTrade AS ESFIDocumentTrade 
+     LEFT JOIN ESFIDocumentType AS FK_ESFIDocumentTrade_ESFIDocumentType
+       ON ESFIDocumentTrade.fADDocumentTypeGID = FK_ESFIDocumentTrade_ESFIDocumentType.GID 
+     INNER JOIN ESFITradeAccount AS FK_ESFIDocumentTrade_ESFITradeAccount
+       ON ESFIDocumentTrade.fTradeAccountGID = FK_ESFIDocumentTrade_ESFITradeAccount.GID 
+     LEFT JOIN ESGOSites AS FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite
+       ON ESFIDocumentTrade.fTradeAccountSiteGID = FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.GID 
+WHERE (ESFIDocumentTrade.fCompanyCode = ##(ESCOMPANY))
+       AND (FK_ESFIDocumentTrade_ESFIDocumentType.Code = 'ΠΑΡ')
+       AND (ESEqual(ESFIDocumentTrade.ADRegistrationDate, @ADRegistrationDate))
+       AND (ESFIDocumentTrade.ADCancelState = 0)
+       AND (ESEqual(ESFIDocumentTrade.GID, @GID))
+       AND (ESEqual(FK_ESFIDocumentTrade_ESFITradeAccount.Code, @Code1))
+       AND (ESEqual(FK_ESFIDocumentTrade_ESFITradeAccount.Name, @Name))
+       AND (ESEqual(ESFIDocumentTrade.ADTransitionState, @ADTransitionState))
+       AND (ESEqual(FK_ESGOSites_ESFIDocumentTrade_TradeAccountSite.Code, @Code2))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFIDocumentTrade</Table>
+  <Params>
+    <Param>
+      <ID>ADRegistrationDate</ID>
+      <Type>Entersoft.Framework.Platform.ESDateRange, QueryProcess</Type>
+      <ODSTag>7F9E950D-6C69-4172-842A-BF34764F9464</ODSTag>
+    </Param>
+    <Param>
+      <ID>GID</ID>
+      <Type>System.Guid, mscorlib</Type>
+      <ODSTag>A233B4F7-E186-4060-B47C-B5E65159DEE0</ODSTag>
+    </Param>
+    <Param>
+      <ID>Code1</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>11AA2299-3F5E-4B2A-B530-6222866A7601</ODSTag>
+    </Param>
+    <Param>
+      <ID>Name</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>7699C12E-3B5F-47E8-B509-7AF97F4560B1</ODSTag>
+    </Param>
+    <Param>
+      <ID>ADTransitionState</ID>
+      <Type>System.Byte, mscorlib</Type>
+      <ODSTag>0D2D704B-5C2A-4467-97F7-EA74546A8CC1</ODSTag>
+    </Param>
+    <Param>
+      <ID>Code2</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>8AF8DB23-B52A-4CA7-BF04-3E1D97B58BEA</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

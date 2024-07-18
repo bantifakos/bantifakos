@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.1.7.0" Ref="0" ControlType="Entersoft.Framework.Reports.Report, ESReportsCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="127, 127, 127, 127" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="22.1" Dpi="254" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="1" Key="DataSerializationExtension" Value="ESREPORTSSERIALIZER" />
+  </Extensions>
+</XtraReportsLayoutSerializer>

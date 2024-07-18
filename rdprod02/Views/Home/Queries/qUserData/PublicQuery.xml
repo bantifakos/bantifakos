@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ##(ESB2BTAGID) AS Name
+SELECT ESGOUser.Name AS Name
+FROM ESGOUser AS ESGOUser 
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESGOUser</Table>
+  <Params />
+</ESPublicQuery>

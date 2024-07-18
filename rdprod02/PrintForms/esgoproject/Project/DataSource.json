@@ -1,0 +1,33 @@
+{
+  "ComputedFields": {
+    "ESGOProject": [
+      {
+        "$type": "Entersoft.Framework.Reports.AssistantRelationField, ESReportsCore",
+        "DataTypeName": "System.String",
+        "FieldName": "Name",
+        "ForeignTableName": "FK_ESGOProject_TradePersonContact",
+        "RelationName": "FK_ESGOProject_TradePersonContact",
+        "Name": "arf_fTradePersonContactGID_Name"
+      },
+      {
+        "$type": "Entersoft.Framework.Reports.CompanyLogoField, ESReportsCore",
+        "Name": "ESCompanyLogoImage"
+      }
+    ]
+  },
+  "ReferencedFields": {
+    "ESGOProject": {
+      "ESCompanyLogoImage": null,
+      "Code": null,
+      "Name": null,
+      "arf_fTradePersonContactGID_Name": null,
+      "fProjectStatusCode": null,
+      "ContractNumber": null,
+      "FinishDate": null,
+      "StartDate": null
+    },
+    "FK_ESGOProject_TradePersonContact": {
+      "Name": null
+    }
+  }
+}

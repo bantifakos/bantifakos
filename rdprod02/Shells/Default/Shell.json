@@ -1,0 +1,247 @@
+{
+  "areas": [
+    {
+      "drawer": {
+        "options": {
+          "minSize": "2.3rem",
+          "opened": true,
+          "size": "2.3rem"
+        }
+      },
+      "placement": "top",
+      "widgets": [
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false,
+              "url": "Home"
+            },
+            "text": {
+              "icon": "fas fa-home"
+            },
+            "tooltip": "Επιστροφή στην κεντρική σελίδα"
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "near",
+          "type": "esmymenu"
+        },
+        {
+          "edge": "center",
+          "options": {
+            "alignment": "center",
+            "color": "1",
+            "size": "1",
+            "style": "sideline"
+          },
+          "type": "espagetitle"
+        },
+        {
+          "edge": "far",
+          "options": {
+            "label": {
+              "edge": "near",
+              "options": {
+                "action": {
+                  "actionType": "custom",
+                  "scrollable": false
+                }
+              },
+              "type": "eswidgetlabel"
+            },
+            "listDisplayMode": "smallPreview",
+            "mode": "dropdown",
+            "themes": [
+              "dark",
+              "darkmoon",
+              "greenmist",
+              "light"
+            ]
+          },
+          "type": "esthemes"
+        },
+        {
+          "edge": "far",
+          "options": {
+            "alwaysVisible": true,
+            "debugMode": true,
+            "mode": "gear",
+            "showBadge": true
+          },
+          "type": "esloadingindicator"
+        },
+        {
+          "edge": "far",
+          "options": {
+            "displayMode": "popover",
+            "popupWidth": "30rem"
+          },
+          "type": "esnotifications"
+        },
+        {
+          "edge": "far",
+          "options": {
+            "action": {
+              "actionType": "signout",
+              "scrollable": false
+            },
+            "image": {
+              "isCircle": false
+            },
+            "text": {
+              "color": "1",
+              "icon": "fas fa-sign-out-alt",
+              "size": "2"
+            },
+            "tooltip": "Αποσύνδεση χρήστη"
+          },
+          "type": "eswidgetlabel"
+        }
+      ]
+    },
+    {
+      "drawer": {
+        "options": {
+          "clickKeepsOverlapping": false,
+          "minSize": "4rem",
+          "opened": true,
+          "size": "14rem"
+        }
+      },
+      "menuSegments": [
+        {
+          "fromLevel": 1,
+          "isVisible": true,
+          "options": {
+            "accordionMode": false,
+            "autoOpenFirstLevel": false,
+            "autoOpenMenuItemId": "0"
+          },
+          "toLevel": 2,
+          "type": "estree"
+        }
+      ],
+      "placement": "left"
+    },
+    {
+      "drawer": {
+        "options": {
+          "opened": true
+        }
+      },
+      "placement": "content",
+      "widgets": [
+        {
+          "edge": "center",
+          "type": "esboardsincontent"
+        }
+      ]
+    },
+    {
+      "drawer": {
+        "options": {
+          "minSize": "2rem",
+          "opened": true,
+          "size": "2rem"
+        }
+      },
+      "placement": "bottom",
+      "widgets": [
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "caption": "$COMPANYNAME",
+              "icon": "fas fa-atom"
+            }
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "caption": "$BRANCHNAME",
+              "icon": "fas fa-house-damage"
+            }
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "caption": "$DATE",
+              "icon": "fas fa-calendar-alt"
+            }
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "caption": "$USERNAME",
+              "icon": "fas fa-user"
+            }
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "near",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "caption": "$EBS_PRODUCT_VERSION",
+              "icon": "fas fa-tv"
+            }
+          },
+          "type": "eswidgetlabel"
+        },
+        {
+          "edge": "far",
+          "options": {
+            "action": {
+              "actionType": "custom",
+              "scrollable": false
+            },
+            "text": {
+              "alignment": "right",
+              "caption": "Powered by Entersoft Web Studio ®",
+              "color": "3",
+              "size": "1"
+            }
+          },
+          "type": "eswidgetlabel"
+        }
+      ]
+    }
+  ],
+  "layout": [
+    "TTT",
+    "LMM",
+    "BBB"
+  ]
+}

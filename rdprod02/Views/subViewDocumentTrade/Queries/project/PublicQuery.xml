@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESGOProject.Code AS Code, 
+       ESGOProject.Name AS Name, 
+       ESGOProject.fCompanyCode AS fCompanyCode
+FROM ESGOProject AS ESGOProject 
+WHERE (ESEqual(ESGOProject.fCompanyCode, ##(escompany)))
+       AND (ESGOProject.Inactive = 0)
+       AND (ESEqual(ESGOProject.Code, @Code))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESGOProject</Table>
+  <Params>
+    <Param>
+      <ID>Code</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>83986CF5-E296-4E66-B612-EC7F344E21F2</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

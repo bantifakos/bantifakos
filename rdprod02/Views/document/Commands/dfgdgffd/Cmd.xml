@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataSetCommand RootNodeType="Entersoft.Framework.Windows.CustomCommands.DataSetCommand, ESCtxCmds" Version="2" CGID="58d75114-f495-41bf-a25a-11533e3d30fa" HasMenuEntry="False" FormMode="NONE">
+  <ParamsNode CGID="7c3d447c-6080-44e1-b351-1afc76213aec" ControlsWidth="200">
+    <ShowConditions CGID="d8967b58-7d4c-4260-a120-6cde712dc757" />
+    <CheckConditions CGID="b07782b2-2249-41cc-8470-5d3e027e6f60" />
+    <Param ID="FilterString" CaptionID="ff0040fa-d199-468d-beb6-e3e80caa1baf" MultiSelect="False" />
+    <ParamFile Filename="CommandParams.xml">
+      <Filter ID="CommandParams" Caption="" CaptionID="b3394baa-6e15-4567-8d4b-3b14aeee2468" Version="1" FilterType="-1" AutoExecInterval="0" DrillDown="False" DrillColName="" LoadAllData="False" ShowAllCategory="False">
+        <Params>
+          <Param ID="FilterString" AA="1" AddedByUser="True">
+            <Caption>FilterString</Caption>
+            <CaptionID>ff0040fa-d199-468d-beb6-e3e80caa1baf</CaptionID>
+            <Tooltip>
+            </Tooltip>
+            <MultiValued>True</MultiValued>
+            <DefaultValue />
+            <ControlType>ctString</ControlType>
+            <ParameterType>System.String, mscorlib</ParameterType>
+            <Visible>True</Visible>
+            <Visibility>Always</Visibility>
+            <Required>False</Required>
+            <Precision>3</Precision>
+            <ODSTag>
+            </ODSTag>
+            <Tags>
+            </Tags>
+          </Param>
+        </Params>
+        <ESReports />
+        <Translations>
+          <ESCaptionsDS xmlns="http://tempuri.org/ESCaptionsDS.xsd">
+            <Captions>
+              <ID>ff0040fa-d199-468d-beb6-e3e80caa1baf</ID>
+              <Suffix>C</Suffix>
+              <LangID>el</LangID>
+              <Caption>FilterString</Caption>
+            </Captions>
+          </ESCaptionsDS>
+        </Translations>
+      </Filter>
+    </ParamFile>
+  </ParamsNode>
+  <Profiles CGID="8f99ddd7-7dfa-4787-9a30-7bd1940f60ab">
+    <Profile CGID="a91f03d1-72ef-4cfc-ac61-bc53addd2143" UILess="True" Identity="True" Save="False">
+      <SourceDataSet />
+      <TargetEntity EntityID="ESFIDocumentTrade_RTL_Demo_DEF" />
+      <SaveExpression CGID="0c06d447-e26c-410c-ab9e-77ed8a1e1309">
+        <Supplier>
+          <EnumValue Type="Entersoft.Framework.Platform.Helper.SaveEnum, ESEntity" Value="SAVE_AND_ACTIONS" />
+        </Supplier>
+      </SaveExpression>
+      <RootRule CGID="453c1ee6-ff33-4aec-8f42-e88ca6b17c4e" Source="Source" Target="ESFIDocumentTrade" TargetKey="GID">
+        <ExecuteSimpleConditions CGID="e9352710-ffec-48b5-b9b0-d445f42c89b9" />
+        <Variables CGID="7c9b5473-04b4-4a9a-a9f0-f959316abddc">
+          <Variable CGID="b08058b1-2330-4d5a-9fa6-e81c1b7cf416" VariableName="DatasetReturn">
+            <Supplier CGID="c331ff62-7737-44ba-bfbf-f266cde53124">
+              <ExpressionValue>#references DemoDatatset.dll
+#Imports DemoDatatset.Class1
+#Imports System.Data.SqlClient
+
+Dim GS As New DemoDatatset.Class1()
+Dim Vn As Dataset=GS.GetMyDataSet()
+
+Return Vn</ExpressionValue>
+            </Supplier>
+          </Variable>
+        </Variables>
+        <Rules CGID="c6eb4195-7fe7-43ad-85af-9b4e3be380bb" />
+        <Conditions CGID="13b9fea2-95cb-4a3d-a10e-1d23381d595d" />
+        <Assignments CGID="ef218b19-d5b2-4d70-af45-a4fd115d10aa" />
+        <OrderByNodes CGID="e12cb33a-8755-4348-a67f-9fb8e64e6930" />
+        <GroupByNodes CGID="69180c87-6cc0-4d7b-8d14-563453fab5c8">
+          <GroupAtMostEntries CGID="01ac80e2-6f99-483e-b790-6305a78a0bcf">
+            <Supplier>
+              <ConstantValue>0</ConstantValue>
+            </Supplier>
+          </GroupAtMostEntries>
+        </GroupByNodes>
+        <MultiplyByNodes CGID="876af405-6b08-4631-b2c7-a3e2e8ab47e6" />
+        <RowActions CGID="fde42d03-ece9-4fd0-a6c9-6d3d3e953ac6" />
+      </RootRule>
+      <MapExceptions CGID="13f4b110-91ad-4c79-be26-fbd4fc6df3f1" />
+      <LoginCredentials CGID="e6455e44-8e2f-4fe4-8145-f9fe1a1d9d26" />
+    </Profile>
+    <Profile CGID="5d6edffe-b0f2-4ff7-849d-c25ddfae8d6e" UILess="True" Identity="True" Save="False">
+      <SourceDataSet />
+      <TargetEntity EntityID="ESFIDocumentTrade_RTL_Demo_DEF" />
+      <SaveExpression CGID="a39b73d5-13d4-43ac-a9a9-b053df2f9445">
+        <Supplier>
+          <EnumValue Type="Entersoft.Framework.Platform.Helper.SaveEnum, ESEntity" Value="SAVE_AND_ACTIONS" />
+        </Supplier>
+      </SaveExpression>
+      <RootRule CGID="5314a87e-e37c-4823-84da-a2f06d2c0b8d" Source="Source" Target="ESFIDocumentTrade" TargetKey="GID">
+        <ExecuteSimpleConditions CGID="a8cb96f4-4c09-448d-a754-0e07b3781cb2" />
+        <Variables CGID="84d43acb-1c47-4bb9-9d0c-1dd94205e547" />
+        <Rules CGID="f8c7d132-76b2-4b50-8d1a-2510cd60fc38">
+          <Rule CGID="f3e1fe1c-1b8e-4da6-bd99-890cb9c894f0" Target="FK_ESFILineItem_ESFIDocumentTrade">
+            <ExecuteSimpleConditions CGID="73c0c6ef-7ca0-4bc5-99fb-2534535eecd1" />
+            <Variables CGID="51332256-a652-45d7-a99d-2938a12a819e" />
+            <Rules CGID="43c2bcff-d5bf-48a6-8dcc-e3495db21a64" />
+            <Conditions CGID="ec9366fe-a8d2-4fc3-952c-fd8613470102" />
+            <Assignments CGID="a08e08a7-88fd-47e9-9684-c4e8a3c6dc2d">
+              <Assign CGID="beb2bed8-3811-4112-8b80-4206d80527b4" Column="LineType">
+                <Supplier>
+                  <EnumValue Type="Entersoft.Framework.Platform.ESFILineItem_LineType_LineType, ESSessionCtx" Value="Material" />
+                </Supplier>
+                <Conditions CGID="2575a0a7-31fb-488e-8f68-c11bedd84d9f" />
+              </Assign>
+              <Assign CGID="50a25b72-b70b-4a74-bb73-1aec20d06530" Column="fItemGID">
+                <Supplier CGID="942cae93-ae7a-42f1-9091-8403e92a8152">
+                  <Param CGID="332a04cd-c60a-4464-b2c8-6f82db3cce87" ParamName="$datarows">
+                    <Supplier>
+                      <MultiplierValue>A</MultiplierValue>
+                    </Supplier>
+                  </Param>
+                  <ExpressionValue>Dim code as DataRow = Directcast($datarows, DataRow)
+Dim codeValue As String = code("code").ToString()
+Return codeValue</ExpressionValue>
+                </Supplier>
+                <Conditions CGID="c3f7f6fa-dd8b-4065-9abf-5634e1c49b7b" />
+              </Assign>
+            </Assignments>
+            <OrderByNodes CGID="1b45542c-581a-466b-8b53-1e9371bb6fa4" />
+            <GroupByNodes CGID="9211e2ec-64df-4f8d-8d01-eb7a85287fc2">
+              <GroupAtMostEntries CGID="93aed139-45f2-468f-bf19-8e52801624fb">
+                <Supplier>
+                  <ConstantValue>0</ConstantValue>
+                </Supplier>
+              </GroupAtMostEntries>
+            </GroupByNodes>
+            <MultiplyByNodes CGID="b51deb1a-8b44-49be-99eb-d0f4dc39ef60">
+              <MultiplyBy CGID="06cbe1b4-4a2b-4b37-b41e-f944f774e548" MultiplyID="A">
+                <Supplier CGID="98b4874d-1a2d-4f71-a9b9-3cecef33c988">
+                  <Param CGID="89687133-ba5d-43ac-a83a-7f6c361c0c31" ParamName="$ds">
+                    <Supplier>
+                      <VariableValue>DatasetReturn</VariableValue>
+                    </Supplier>
+                  </Param>
+                  <Param CGID="a9ca5800-41ae-4aa9-ab9c-a5690eaca329" ParamName="$param">
+                    <Supplier>
+                      <CommandParamValue>FilterString</CommandParamValue>
+                    </Supplier>
+                  </Param>
+                  <ExpressionValue>#References ESDialogs.dll
+#References ESStyler.dll
+#References ESControlsCore.dll
+#References ESControlsCore.dll
+#References ESPictureUC.dll
+#References System.Windows.Forms.dll
+#References System.Drawing.dll
+#References System.IO.dll
+#Imports Entersoft.Framework.Windows.Controls 
+#Imports System.Windows.Forms
+#Imports System.Drawing 
+#Imports System.IO
+#References DevExpress.Utils.v22.1.dll
+#References ESCollaboration.Integration.dll
+#References ESControlsIFs.dll
+
+#include_ui
+
+'Dim dt As DataTable = DirectCast($ds, DataSet).Tables(0)
+
+'Dim filteredRows() As DataRow = dt.Select(String.Format("code LIKE '{0}%'",$param.tostring))
+
+'Dim filteredDataTable As DataTable = dt.Clone()
+
+
+'For Each row As DataRow In filteredRows
+'    filteredDataTable.ImportRow(row)
+'Next
+
+
+Dim filteredRows() As DataRow = DirectCast($ds, DataSet).Tables(0).Select("code LIKE '" &amp; $param.ToString &amp; "%'")
+
+
+return filteredRows</ExpressionValue>
+                </Supplier>
+              </MultiplyBy>
+            </MultiplyByNodes>
+            <RowActions CGID="ada61e88-4550-493b-b8e5-50acd82c55b1" />
+          </Rule>
+        </Rules>
+        <Conditions CGID="85e9419b-3360-402d-8a19-43f83fe8c97f" />
+        <Assignments CGID="e419b5e6-d70c-4efc-b067-278afd8ffa61" />
+        <OrderByNodes CGID="0071984d-fc81-42ee-b0e2-3b50c0611c60" />
+        <GroupByNodes CGID="41e8ada6-fe3e-4c99-a23a-c6310049406c">
+          <GroupAtMostEntries CGID="599ef58a-f75e-4d88-ac6c-4a284035a97d">
+            <Supplier>
+              <ConstantValue>0</ConstantValue>
+            </Supplier>
+          </GroupAtMostEntries>
+        </GroupByNodes>
+        <MultiplyByNodes CGID="fdb8eb9a-12c4-417b-97ec-40add1fbbd8d" />
+        <RowActions CGID="9988470e-2f7f-4f6f-9915-741caa460af9" />
+      </RootRule>
+      <MapExceptions CGID="c9b16f9d-6fec-471f-bb4a-a272ae3058bb" />
+      <LoginCredentials CGID="e8db8a82-01c7-4bcd-b89d-0ff1b56f7f7d" />
+    </Profile>
+  </Profiles>
+  <ExecuteConditions CGID="5b63c3c7-bf04-48a9-9afc-1a6696932098" />
+  <ShowSimpleConditions CGID="613584be-08fb-4601-80f9-ed70cc89a7e0" />
+  <ExecuteMessageConditions CGID="cfc5c89a-d3a0-40c5-9301-1deebf2e57f6" />
+  <ValidityConditions CGID="b3970ef6-2b31-402a-9de5-3e520ea0e5e1" />
+  <UserGroups>
+  </UserGroups>
+  <CommandAvailability />
+  <SourceDataSet />
+  <Translations>
+    <ESCaptionsDS xmlns="http://tempuri.org/ESCaptionsDS.xsd">
+  <Captions>
+    <ID>01ac80e2-6f99-483e-b790-6305a78a0bcf</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Maximum Entries</Caption>
+  </Captions>
+  <Captions>
+    <ID>a91f03d1-72ef-4cfc-ac61-bc53addd2143</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Step1-Returndataset</Caption>
+  </Captions>
+  <Captions>
+    <ID>b08058b1-2330-4d5a-9fa6-e81c1b7cf416</ID>
+    <Suffix>Description</Suffix>
+    <LangID>el</LangID>
+    <Caption>DatasetReturn</Caption>
+  </Captions>
+  <Captions>
+    <ID>93aed139-45f2-468f-bf19-8e52801624fb</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Maximum Entries</Caption>
+  </Captions>
+  <Captions>
+    <ID>06cbe1b4-4a2b-4b37-b41e-f944f774e548</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>A</Caption>
+  </Captions>
+  <Captions>
+    <ID>599ef58a-f75e-4d88-ac6c-4a284035a97d</ID>
+    <Suffix>Title</Suffix>
+    <LangID>el</LangID>
+    <Caption>Maximum Entries</Caption>
+  </Captions>
+  <Captions>
+    <ID>ff0040fa-d199-468d-beb6-e3e80caa1baf</ID>
+    <Suffix>C</Suffix>
+    <LangID>el</LangID>
+    <Caption>FilterString</Caption>
+  </Captions>
+  <Captions>
+    <ID>58d75114-f495-41bf-a25a-11533e3d30fa</ID>
+    <Suffix>Caption</Suffix>
+    <LangID>el</LangID>
+    <Caption>ImportFromDataset</Caption>
+  </Captions>
+</ESCaptionsDS>
+  </Translations>
+</DataSetCommand>

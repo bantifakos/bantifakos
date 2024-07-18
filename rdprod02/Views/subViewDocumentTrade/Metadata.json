@@ -1,0 +1,20 @@
+{
+  "~!": {
+    "shortcutParams": [
+      {
+        "propertyPath": "userPreferences"
+      },
+      {
+        "componentId": "grdx_DocumentTrade",
+        "propertyPath": "userPreferences"
+      }
+    ],
+    "title": "Offer"
+  },
+  "~!/dsgn": {
+    "hints": {
+      "disablePagePreferences": false,
+      "hasServerConditions": false
+    }
+  }
+}

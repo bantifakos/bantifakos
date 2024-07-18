@@ -1,0 +1,348 @@
+{
+  "@ADCode": {
+    "dsgnInfo": {
+      "helpTextId": "SSSSADASDASDASDASDASD"
+    }
+  },
+  "@ADCode_helpTextId": {
+    "dsgn": {
+      "owner": "ADCode"
+    }
+  },
+  "@dsDocumentTrade": {
+    "dsgn": {
+      "dsType": "ΑΠΛ/Απόδειξη Λιανικής - Δελτίο Αποστολής"
+    }
+  },
+  "@EnumAssemblyType": {
+    "dsgn": {
+      "EnumType": "Entersoft.ERP.Financials.Enums.AssemblyType, ESFIEnums"
+    }
+  },
+  "@EnumAssemblyType/properties/data/_value": {
+    "dsgn": null
+  },
+  "@EnumAssemblyType/properties/data/initialValue": {
+    "dsgn": {
+      "Columns": [
+        {
+          "Caption": null,
+          "Kind": "Integer",
+          "Name": "value"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "name"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "displayText"
+        }
+      ]
+    }
+  },
+  "@EnumESFILineItem_LineType_LineType": {
+    "dsgn": {
+      "EnumType": "Entersoft.Framework.Platform.ESFILineItem_LineType_LineType, ESSessionCtx"
+    }
+  },
+  "@EnumESFILineItem_LineType_LineType/properties/data/_value": {
+    "dsgn": null
+  },
+  "@EnumESFILineItem_LineType_LineType/properties/data/initialValue": {
+    "dsgn": {
+      "Columns": [
+        {
+          "Caption": "value",
+          "Kind": "Integer",
+          "Name": "value"
+        },
+        {
+          "Caption": "displayText",
+          "Kind": "String",
+          "Name": "displayText"
+        },
+        {
+          "Caption": "name",
+          "Kind": "String",
+          "Name": "name"
+        },
+        {
+          "Caption": "LineType",
+          "Kind": "Integer",
+          "Name": "LineType"
+        },
+        {
+          "Caption": "IsValid",
+          "Kind": "Boolean",
+          "Name": "IsValid"
+        }
+      ]
+    }
+  },
+  "@EnumItemClass": {
+    "dsgn": {
+      "EnumType": "Entersoft.ERP.Financials.Enums.ItemClass, ESFIEnums"
+    }
+  },
+  "@EnumItemClass/properties/data/_value": {
+    "dsgn": null
+  },
+  "@EnumItemClass/properties/data/initialValue": {
+    "dsgn": {
+      "Columns": [
+        {
+          "Caption": null,
+          "Kind": "Integer",
+          "Name": "value"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "name"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "displayText"
+        }
+      ]
+    }
+  },
+  "@EnumItemType_Enum": {
+    "dsgn": {
+      "EnumType": "Entersoft.ERP.MaterialsMgmt.DS.ItemType_Enum, ESMMStockItemISUD"
+    }
+  },
+  "@EnumItemType_Enum/properties/data/_value": {
+    "dsgn": null
+  },
+  "@EnumItemType_Enum/properties/data/initialValue": {
+    "dsgn": {
+      "Columns": [
+        {
+          "Caption": null,
+          "Kind": "Integer",
+          "Name": "value"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "name"
+        },
+        {
+          "Caption": null,
+          "Kind": "",
+          "Name": "displayText"
+        }
+      ]
+    }
+  },
+  "@externalServiceData": {
+    "dsgnInfo": {
+      "maxSampleData": null,
+      "minSampleData": null
+    }
+  },
+  "@fItemGID": {
+    "dsgn": {
+      "assignments": {
+        "destMembers": [
+          "fItemGID"
+        ],
+        "item": {
+          "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+          "fromComponent": "LineItem",
+          "fromPropertyPath": "dataprovider.current.item"
+        },
+        "srcMembers": [
+          "GID"
+        ]
+      }
+    }
+  },
+  "@fItemGID_LineKind": {
+    "dsgn": {
+      "owner": "fItemGID"
+    }
+  },
+  "@fTradeAccountGID": {
+    "dsgn": {
+      "assignments": {
+        "destMembers": [
+          "fTradeAccountGID"
+        ],
+        "item": {
+          "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+          "fromComponent": "DocumentTrade",
+          "fromPropertyPath": "dataprovider.current.item"
+        },
+        "srcMembers": [
+          "GID"
+        ]
+      }
+    }
+  },
+  "@fTradeAccountGID1": {
+    "dsgn": {
+      "assignments": {
+        "destMembers": [
+          "fTradeAccountGID"
+        ],
+        "item": {
+          "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+          "fromComponent": "DocumentTrade",
+          "fromPropertyPath": "dataprovider.current.item"
+        },
+        "srcMembers": [
+          "GID"
+        ]
+      }
+    }
+  },
+  "@gp_3bz8": {
+    "dsgnInfo": {
+      "columns": {
+        "bands": [],
+        "count": null,
+        "mode": "advanced",
+        "template": null
+      },
+      "rows": {
+        "bands": [],
+        "count": null,
+        "mode": "advanced",
+        "template": null
+      }
+    }
+  },
+  "@gp_xf5h": {
+    "dsgnInfo": {
+      "columns": {
+        "bands": [],
+        "count": null,
+        "mode": "advanced",
+        "template": null
+      },
+      "rows": {
+        "bands": [],
+        "count": null,
+        "mode": "advanced",
+        "template": null
+      }
+    }
+  },
+  "@grdLineItems": {
+    "dsgnInfo": {
+      "maxSampleData": null,
+      "minSampleData": null
+    }
+  },
+  "@grdx_e5tk": {
+    "dsgnInfo": {
+      "maxSampleData": null,
+      "minSampleData": null
+    }
+  },
+  "@grdx_yy5e": {
+    "dsgnInfo": {
+      "maxSampleData": null,
+      "minSampleData": null
+    }
+  },
+  "@p_4n1": {
+    "dsgnInfo": {
+      "sizesMetric": "auto",
+      "sizesVal": null
+    }
+  },
+  "@p_bc2m": {
+    "dsgnInfo": {
+      "sizesMetric": null,
+      "sizesVal": null
+    }
+  },
+  "@p_cc0g": {
+    "dsgnInfo": {
+      "sizesMetric": "empty",
+      "sizesVal": "1,auto"
+    }
+  },
+  "@p_fe3o": {
+    "dsgnInfo": {
+      "sizesMetric": "empty",
+      "sizesVal": "3,1"
+    }
+  },
+  "@p_ju5d": {
+    "dsgnInfo": {
+      "sizesMetric": null,
+      "sizesVal": null
+    }
+  },
+  "@p_kq6": {
+    "dsgnInfo": {
+      "sizesMetric": "empty",
+      "sizesVal": "1,auto"
+    }
+  },
+  "@p_rb4s": {
+    "dsgnInfo": {
+      "sizesMetric": null,
+      "sizesVal": null
+    }
+  },
+  "@pageItems": {
+    "dsgnInfo": {
+      "sizesMetric": "auto",
+      "sizesVal": null
+    }
+  },
+  "@pnlDetails": {
+    "dsgnInfo": {
+      "sizesMetric": "empty",
+      "sizesVal": "3,1"
+    }
+  },
+  "@pnlHeader": {
+    "dsgnInfo": {
+      "sizesMetric": "auto",
+      "sizesVal": null
+    }
+  },
+  "@pnlLineItemActions": {
+    "dsgnInfo": {
+      "sizesMetric": "auto",
+      "sizesVal": null
+    }
+  },
+  "@pnlLineItemEdit": {
+    "dsgnInfo": {
+      "sizesMetric": "%",
+      "sizesVal": "50"
+    }
+  },
+  "@pnlTools": {
+    "dsgnInfo": {
+      "sizesMetric": "auto",
+      "sizesVal": null
+    }
+  },
+  "@svAddLineItems_title": {
+    "dsgn": {
+      "owner": "svAddLineItems"
+    }
+  },
+  "@svCreatePDF_ExportFilename": {
+    "dsgn": {
+      "owner": "svCreatePDF"
+    }
+  },
+  "@uilOnSaveShowSuccess_message": {
+    "dsgn": {
+      "owner": "uilOnSaveShowSuccess"
+    }
+  }
+}

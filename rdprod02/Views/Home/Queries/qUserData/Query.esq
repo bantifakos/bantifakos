@@ -1,0 +1,64 @@
+<ESQueryDS>
+  <Queries>
+    <GID>4f122c32-6e1b-423b-bd08-e836406ef2d4</GID>
+    <NameInDB>Query_ESGOUser</NameInDB>
+    <DisplayName>Φίλτρο Χρήστες</DisplayName>
+    <Location>0</Location>
+    <frEntryTableGID>318fd72b-71d9-4340-b5c6-8692e7d68f06</frEntryTableGID>
+    <TopN>false</TopN>
+    <GroupingMode>0</GroupingMode>
+  </Queries>
+  <QryTables>
+    <GID>c1b19551-44c7-49be-95e7-1cdb19b5c6ea</GID>
+    <frTableGID>318fd72b-71d9-4340-b5c6-8692e7d68f06</frTableGID>
+    <NameInDB>ESGOUser</NameInDB>
+    <Alias>ESGOUser</Alias>
+    <DisplayName>Χρήστες</DisplayName>
+    <ODSTag>318FD72B-71D9-4340-B5C6-8692E7D68F06</ODSTag>
+    <Path>\318fd72b-71d9-4340-b5c6-8692e7d68f06</Path>
+    <AddedBy>0</AddedBy>
+  </QryTables>
+  <QryExpressions>
+    <GID>c6b76162-0f84-48f9-b1b5-e4b62d28b206</GID>
+    <Expression>SELECT ##(ESB2BTAGID) AS Name</Expression>
+  </QryExpressions>
+  <QryExpressions>
+    <GID>11623bca-456a-4788-b8bc-f58336faa304</GID>
+    <Expression />
+  </QryExpressions>
+  <QryColumns>
+    <GID>335ce42a-87d1-4792-b81e-6710076ef5aa</GID>
+    <fQryTableGID>c1b19551-44c7-49be-95e7-1cdb19b5c6ea</fQryTableGID>
+    <SeqNo>1</SeqNo>
+    <NameInDB>Name</NameInDB>
+    <Alias>Name</Alias>
+    <AddedBy>1</AddedBy>
+    <Visible>true</Visible>
+    <frColumnGID>cb7483b1-ff3e-4194-bba5-a1d52514d9bd</frColumnGID>
+    <DisplayName>Ονοματεπώνυμο</DisplayName>
+    <ODSTag>CB7483B1-FF3E-4194-BBA5-A1D52514D9BD</ODSTag>
+    <DataType>6</DataType>
+    <Asked>false</Asked>
+  </QryColumns>
+  <QryJoins>
+    <GID>c53221fc-4737-4f74-a097-f706a247d5e1</GID>
+    <Level>0</Level>
+    <JoinType>0</JoinType>
+    <FirstTableIsMaster>false</FirstTableIsMaster>
+    <fBTableGID>c1b19551-44c7-49be-95e7-1cdb19b5c6ea</fBTableGID>
+  </QryJoins>
+  <QryCriteria>
+    <GID>c08c2276-43b7-4ee5-b78c-78414f5ceb41</GID>
+    <InWhere>true</InWhere>
+    <SeqNo>1</SeqNo>
+    <Negative>false</Negative>
+  </QryCriteria>
+  <VersionInfo>
+    <Version>1</Version>
+  </VersionInfo>
+  <SQLAdditions>
+    <fPreSelectExprGID>c6b76162-0f84-48f9-b1b5-e4b62d28b206</fPreSelectExprGID>
+    <fPostFromExprGID>11623bca-456a-4788-b8bc-f58336faa304</fPostFromExprGID>
+    <InsteadOf>false</InsteadOf>
+  </SQLAdditions>
+</ESQueryDS>

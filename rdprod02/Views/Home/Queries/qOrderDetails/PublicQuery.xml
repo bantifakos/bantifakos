@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFILineItem.GID AS GID, 
+       ESFILineItem.fDocumentGID AS fDocumentGID, 
+       ESFILineItem.LineNumber AS LineNumber, 
+       ESFILineItem.fItemGID AS fItemGID, 
+       FK_ESFILineItem_ESFIItem.Code AS Code, 
+       FK_ESFILineItem_ESFIItem.Description AS Description, 
+       ESFILineItem.LineType AS LineType, 
+       FK_ESFILineItem_ESMMItemMU.fMUCode AS fMUCode, 
+       FK_ESMMItemUnit_ESMMZMeasurementUnit.Description AS Description1, 
+       ESFILineItem.fSalesPersonGID AS fSalesPersonGID, 
+       ESFILineItem.Quantity AS Quantity, 
+       ESFILineItem.Price AS Price, 
+       ESFILineItem.Discount1 AS Discount1, 
+       ESFILineItem.Discount2 AS Discount2, 
+       ESFILineItem.Discount1Value AS Discount1Value, 
+       ESFILineItem.Discount2Value AS Discount2Value, 
+       ESFILineItem.CurrencyNetValue AS CurrencyNetValue, 
+       ESFILineItem.CurrencyVATValue AS CurrencyVATValue, 
+       ESFILineItem.CurrencyTotalValue AS CurrencyTotalValue, 
+       ESFILineItem.ClosedQtyBaseMU AS ClosedQtyBaseMU
+FROM ESFILineItem AS ESFILineItem 
+     LEFT JOIN ESFIItem AS FK_ESFILineItem_ESFIItem
+       ON ESFILineItem.fItemGID = FK_ESFILineItem_ESFIItem.GID 
+     LEFT JOIN ESMMItemMU AS FK_ESFILineItem_ESMMItemMU
+       ON ESFILineItem.fItemMUGID = FK_ESFILineItem_ESMMItemMU.GID 
+     INNER JOIN ESMMZMeasurementUnit AS FK_ESMMItemUnit_ESMMZMeasurementUnit
+       ON FK_ESFILineItem_ESMMItemMU.fMUCode = FK_ESMMItemUnit_ESMMZMeasurementUnit.Code 
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFILineItem</Table>
+  <Params />
+</ESPublicQuery>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFILineItem.GID AS GID, 
+       ESFILineItem.LineNumber AS LineNumber, 
+       ESFILineItem.fItemGID AS fItemGID, 
+       FK_ESFILineItem_ESFIItem.Code AS Code, 
+       FK_ESFILineItem_ESFIItem.Description AS Description, 
+       ESFILineItem.LineType AS LineType, 
+       FK_ESFILineItem_ESMMItemMU.fMUCode AS fMUCode, 
+       ESFILineItem.Reasoning AS Reasoning, 
+       ESFILineItem.Comment AS Comment, 
+       ESFILineItem.Quantity AS Quantity, 
+       ESFILineItem.Price AS Price, 
+       ESFILineItem.CurrencyTradeDiscountValue AS CurrencyTradeDiscountValue, 
+       ESFILineItem.CurrencyNetValue AS CurrencyNetValue, 
+       ESFILineItem.CurrencyVATValue AS CurrencyVATValue, 
+       ESFILineItem.CurrencyTotalValue AS CurrencyTotalValue, 
+       ESFILineItem.DeliveryDate AS DeliveryDate, 
+       ESFILineItem.ClosedQtyBaseMU AS ClosedQtyBaseMU, 
+       ESFILineItem.fDocumentGID AS fDocumentGID, 
+       ESFILineItem.UDFValue1 AS UDFValue1
+FROM ESFILineItem AS ESFILineItem 
+     LEFT JOIN ESFIItem AS FK_ESFILineItem_ESFIItem
+       ON ESFILineItem.fItemGID = FK_ESFILineItem_ESFIItem.GID 
+     LEFT JOIN ESMMItemMU AS FK_ESFILineItem_ESMMItemMU
+       ON ESFILineItem.fItemMUGID = FK_ESFILineItem_ESMMItemMU.GID 
+     LEFT JOIN ESFIDocumentTrade AS FK_ESFILineItem_ESFIDocumentTrade
+       ON ESFILineItem.fDocumentGID = FK_ESFILineItem_ESFIDocumentTrade.GID 
+     LEFT JOIN ESFIDocumentType AS FK_ESFIDocumentTrade_ESFIDocumentType
+       ON FK_ESFILineItem_ESFIDocumentTrade.fADDocumentTypeGID = FK_ESFIDocumentTrade_ESFIDocumentType.GID 
+WHERE (ESEqual(ESFILineItem.fDocumentGID, @fDocumentGID))
+       AND (FK_ESFIDocumentTrade_ESFIDocumentType.Code = 'ΠΑΡ')
+       AND (FK_ESFILineItem_ESFIDocumentTrade.ADRegistrationDate >= '2023-01-01')
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFILineItem</Table>
+  <Params>
+    <Param>
+      <ID>fDocumentGID</ID>
+      <Type>System.Guid, mscorlib</Type>
+      <ODSTag>6B133CAF-83BC-474B-9314-031AD45F6386</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

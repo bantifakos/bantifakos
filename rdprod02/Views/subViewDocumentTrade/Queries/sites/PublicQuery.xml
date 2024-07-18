@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESGOSites.GID AS GID, 
+       ESGOSites.fPersonCodeGID AS fPersonCodeGID, 
+       ESGOSites.Code AS Code, 
+       ESGOSites.Description AS Description, 
+       FK_ESGOPerson_PersonCode.Code AS Code1
+FROM ESGOSites AS ESGOSites 
+     LEFT JOIN ESGOPerson AS FK_ESGOPerson_PersonCode
+       ON ESGOSites.fPersonCodeGID = FK_ESGOPerson_PersonCode.GID 
+     INNER JOIN ESGOCompany AS FK_ESGOCompany_ESGOPerson
+       ON FK_ESGOPerson_PersonCode.GID = FK_ESGOCompany_ESGOPerson.fPersonCodeGID 
+WHERE (ESGOSites.KindSite = 1)
+       AND (FK_ESGOCompany_ESGOPerson.Code = ##(ESCOMPANY))
+       AND (ESEqual(FK_ESGOPerson_PersonCode.Code, @Code1))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESGOSites</Table>
+  <Params>
+    <Param>
+      <ID>Code1</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>2FE47A06-35C1-4977-99F3-71341573BDDD</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

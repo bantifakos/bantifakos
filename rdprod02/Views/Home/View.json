@@ -1,0 +1,274 @@
+{
+  "hasFixedHeight": true,
+  "id": "Home",
+  "items": [
+    {
+      "id": "popItems",
+      "items": [],
+      "typeName": "Group"
+    },
+    {
+      "id": "frm_yuqd",
+      "items": [
+        {
+          "id": "img_logo1",
+          "properties": {
+            "blobKeyId": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qLogo_dv",
+              "fromPropertyPath": "dataprovider.current.item.KeyID"
+            },
+            "blobObjectId": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qLogo_dv",
+              "fromPropertyPath": "dataprovider.current.item.ObjectID"
+            },
+            "disabled": false
+          },
+          "typeName": "Image"
+        },
+        {
+          "id": "img_logo2",
+          "options": {
+            "l": "40px",
+            "t": "40px"
+          },
+          "properties": {
+            "blobKeyId": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qLogo_dv",
+              "fromPropertyPath": "dataprovider.current.item.KeyID"
+            },
+            "blobObjectId": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qLogo_dv",
+              "fromPropertyPath": "dataprovider.current.item.ObjectID"
+            },
+            "disabled": true,
+            "imgStyle": "contain",
+            "isCircle": true,
+            "url": "data:image/png;base64,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",
+            "urlType": "blobKey",
+            "visible": false
+          },
+          "typeName": "Image"
+        }
+      ],
+      "properties": {
+        "captionType": "label",
+        "help": {},
+        "overflowMode": "noWrapAndEllipsis"
+      },
+      "typeName": "Frame"
+    },
+    {
+      "id": "shelvedItems",
+      "items": [],
+      "typeName": "Group"
+    },
+    {
+      "id": "availableItems",
+      "items": [],
+      "typeName": "Group"
+    }
+  ],
+  "layoutName": "general",
+  "uilessItems": {
+    "datasources": [
+      {
+        "id": "qLogo",
+        "options": {
+          "extraColumns": {},
+          "queryId": "qLogo"
+        },
+        "properties": {
+          "autoRun": true,
+          "canExecuteIsTrigger": true,
+          "params": {}
+        },
+        "typeName": "PQ"
+      },
+      {
+        "id": "qLogo_dv",
+        "properties": {
+          "dsDataprovider": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qLogo",
+            "fromPropertyPath": "dataprovider"
+          },
+          "firstAutoSelected": true
+        },
+        "typeName": "Dataview"
+      },
+      {
+        "id": "qCurrentUserData",
+        "options": {
+          "extraColumns": {},
+          "queryId": "qCurrentUserData"
+        },
+        "properties": {
+          "autoRun": true,
+          "canExecuteIsTrigger": true,
+          "params": {}
+        },
+        "typeName": "PQ"
+      },
+      {
+        "id": "qCurrentUserData_dv",
+        "properties": {
+          "dsDataprovider": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qCurrentUserData",
+            "fromPropertyPath": "dataprovider"
+          },
+          "firstAutoSelected": true
+        },
+        "typeName": "Dataview"
+      },
+      {
+        "id": "qCheckLastOrderdate",
+        "options": {
+          "extraColumns": {},
+          "queryId": "qCheckLastOrderdate"
+        },
+        "properties": {
+          "autoRun": true,
+          "canExecuteIsTrigger": true,
+          "params": {}
+        },
+        "typeName": "PQ"
+      },
+      {
+        "id": "qCheckLastOrderdate_dv",
+        "properties": {
+          "dsDataprovider": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qCheckLastOrderdate",
+            "fromPropertyPath": "dataprovider"
+          },
+          "firstAutoSelected": true
+        },
+        "typeName": "Dataview"
+      },
+      {
+        "id": "qCheckForTransitionStepCode",
+        "options": {
+          "extraColumns": {},
+          "queryId": "qCheckForTransitionStepCode"
+        },
+        "properties": {
+          "autoRun": true,
+          "canExecuteIsTrigger": true,
+          "params": {}
+        },
+        "typeName": "PQ"
+      },
+      {
+        "id": "qCheckForTransitionStepCode_dv",
+        "properties": {
+          "dsDataprovider": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qCheckForTransitionStepCode",
+            "fromPropertyPath": "dataprovider"
+          },
+          "firstAutoSelected": true
+        },
+        "typeName": "Dataview"
+      }
+    ],
+    "otherUIlessItems": [
+      {
+        "id": "viewProps",
+        "properties": {},
+        "typeName": "ViewProps"
+      }
+    ],
+    "ui_logic": [
+      {
+        "id": "uilStringExpressionMaxOrderDate",
+        "options": {
+          "functionName": "strFormat",
+          "isAction": false
+        },
+        "properties": {
+          "args": {
+            "day": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qCheckLastOrderdate_dv",
+              "fromPropertyPath": "dataprovider.current.item.ADRegistrationDate"
+            },
+            "expr": "You have to insert order more than $day days"
+          }
+        },
+        "typeName": "UILogic"
+      },
+      {
+        "id": "uilMsgBoxCheckTransitionStep",
+        "options": {
+          "functionName": "showMessageDialog",
+          "isAction": true
+        },
+        "properties": {
+          "args": {
+            "message": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "uilStringExpresssionTransitionStep",
+              "fromPropertyPath": "result"
+            },
+            "title": "Attention",
+            "type": "OK"
+          },
+          "canExecute": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qCheckForTransitionStepCode_dv",
+            "fromPropertyPath": "dataprovider.current.item.ADRegistrationDate>0"
+          }
+        },
+        "typeName": "UILogic"
+      },
+      {
+        "id": "uilStringExpresssionTransitionStep",
+        "options": {
+          "functionName": "strFormat",
+          "isAction": false
+        },
+        "properties": {
+          "args": {
+            "days": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "qCheckForTransitionStepCode_dv",
+              "fromPropertyPath": "dataprovider.current.item.ADRegistrationDate"
+            },
+            "expr": "You have register an order having  $days days to change INITIAL status"
+          },
+          "canExecuteIsTrigger": true
+        },
+        "typeName": "UILogic"
+      },
+      {
+        "id": "uilMsgBoxCheckMaxOrderDate",
+        "options": {
+          "functionName": "showMessageDialog",
+          "isAction": true
+        },
+        "properties": {
+          "args": {
+            "message": {
+              "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+              "fromComponent": "uilStringExpressionMaxOrderDate",
+              "fromPropertyPath": "result"
+            },
+            "title": "Attention",
+            "type": "OK"
+          },
+          "canExecute": {
+            "$type": "ESWebApp.Models.EsViewBase+Binding, ESWebApp",
+            "fromComponent": "qCheckLastOrderdate_dv",
+            "fromPropertyPath": "dataprovider.current.item.ADRegistrationDate>0"
+          }
+        },
+        "typeName": "UILogic"
+      }
+    ]
+  }
+}

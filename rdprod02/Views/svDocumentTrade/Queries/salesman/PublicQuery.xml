@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFISalesPerson.GID AS GID, 
+       ESFISalesPerson.Code AS Code, 
+       ESFISalesPerson.Name AS Name, 
+       FK_ESGOUser_ESFISalesPerson.UserID AS UserID, 
+       ESFISalesPerson.fCompanyCode AS fCompanyCode
+FROM ESFISalesPerson AS ESFISalesPerson 
+     INNER JOIN ESGOUser AS FK_ESGOUser_ESFISalesPerson
+       ON ESFISalesPerson.fPersonCodeGID = FK_ESGOUser_ESFISalesPerson.fPersonLinkGID 
+WHERE (ESFISalesPerson.fCompanyCode = ##(ESCOMPANY))
+       AND (FK_ESGOUser_ESFISalesPerson.UserID = ##(ESUSER))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFISalesPerson</Table>
+  <Params />
+</ESPublicQuery>

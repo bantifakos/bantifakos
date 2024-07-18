@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESFITradeAccount.GID AS GID, 
+       ESFITradeAccount.Code AS Code, 
+       ESFITradeAccount.Name AS Name, 
+       FK_ESGOPerson_PersonCode1.TaxRegistrationNumber AS TaxRegistrationNumber
+FROM ESFITradeAccount AS ESFITradeAccount 
+     LEFT JOIN ESGOPerson AS FK_ESGOPerson_PersonCode1
+       ON ESFITradeAccount.fPersonCodeGID = FK_ESGOPerson_PersonCode1.GID 
+WHERE (ESEqual(ESFITradeAccount.fCompanyCode, ##(ESCOMPANY)))
+       AND (ESFITradeAccount.Type = 0)
+       AND (ESFITradeAccount.Inactive = 0)
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESFITradeAccount</Table>
+  <Params />
+</ESPublicQuery>

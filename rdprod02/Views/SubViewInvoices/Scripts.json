@@ -1,0 +1,7 @@
+{
+  "@uilIsInactiveColumnVisible/dsgn": {
+    "functionBody": "$inactive || ISNULL($inactive)",
+    "functionId": "fn_SubViewInvoices_0",
+    "functionScriptKind": "Function"
+  }
+}

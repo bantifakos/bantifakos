@@ -1,0 +1,32 @@
+{
+  "ComputedFields": {
+    "ESFIDocumentTrade": [
+      {
+        "$type": "Entersoft.Framework.Reports.FormattedField, ESReportsCore",
+        "FieldName": "CurrencyTotalValue",
+        "Name": "CurrencyTotalValue_Text"
+      },
+      {
+        "$type": "Entersoft.Framework.Reports.AssistantRelationField, ESReportsCore",
+        "DataTypeName": "System.String",
+        "FieldName": "ESGOPerson_Name",
+        "ForeignTableName": "FK_ESFIDocumentTrade_ESFITradeAccount",
+        "RelationName": "FK_ESFIDocumentTrade_ESFITradeAccount",
+        "Name": "arf_fTradeAccountGID_ESGOPerson_Name"
+      }
+    ],
+    "FK_ESFIDocumentTrade_ESFITradeAccount": []
+  },
+  "ReferencedFields": {
+    "ESFIDocumentTrade": {
+      "arf_fTradeAccountGID_ESGOPerson_Name": null,
+      "ADCode": null,
+      "CurrencyTotalValue_Text": null,
+      "ADTotalValue": null,
+      "ADRegistrationDate": null
+    },
+    "FK_ESFIDocumentTrade_ESFITradeAccount": {
+      "ESGOPerson_Name": null
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ESPublicQuery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SQL><![CDATA[SELECT ESGOUser.GID AS GID, 
+       ESGOUser.UserID AS UserID, 
+       ESGOUser.Name AS Name, 
+       ESGOUser.Inactive AS Inactive
+FROM ESGOUser AS ESGOUser 
+WHERE (ESGOUser.fCompanyCode = ##(ESCOMPANY))
+       AND (ESEqual(ESGOUser.UserID, @ESUCreated))
+      
+]]></SQL>
+  <SQLforPaging><![CDATA[]]></SQLforPaging>
+  <Table>ESGOUser</Table>
+  <Params>
+    <Param>
+      <ID>ESUCreated</ID>
+      <Type>System.String, mscorlib</Type>
+      <ODSTag>E7A28436-2369-45BC-9972-E85E61B58F5F</ODSTag>
+    </Param>
+  </Params>
+</ESPublicQuery>

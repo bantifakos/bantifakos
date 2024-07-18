@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table1" msprop:QueryId="prototypeOrderPerShip">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Category" type="xs:string" minOccurs="0" />
+              <xs:element name="SubCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="IMPACode" type="xs:string" minOccurs="0" />
+              <xs:element name="WHOCode" type="xs:string" minOccurs="0" />
+              <xs:element name="RefNo" type="xs:string" minOccurs="0" />
+              <xs:element name="GenericName" type="xs:string" minOccurs="0" />
+              <xs:element name="BrandName" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitType" type="xs:string" minOccurs="0" />
+              <xs:element name="RequiredQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="NewQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="TreatmentRequirement" type="xs:string" minOccurs="0" />
+              <xs:element name="Recomemdeddoses" type="xs:string" minOccurs="0" />
+              <xs:element name="fItemGID1" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
