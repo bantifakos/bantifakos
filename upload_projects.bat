@@ -11,7 +11,7 @@ REM Add all changes to git
 git add .
 
 REM Commit the changes
-git commit -m "Updated projects"
+git commit -m "DRPharmacy project"
 
 REM Push to the main branch
 git branch -M main
